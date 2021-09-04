@@ -1,4 +1,0 @@
-#Sun Sep 05 01:48:40 IST 2021
-base.0=C\:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

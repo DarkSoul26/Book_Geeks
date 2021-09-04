@@ -1,12 +1,11 @@
 import 'package:book_geeks/pages/cart/my_cart.dart';
 import 'package:book_geeks/pages/fav_books/fav_book.dart';
+import 'package:book_geeks/pages/user_profile/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 class NavDrawer extends StatefulWidget {
-
   @override
   _NavDrawerState createState() => _NavDrawerState();
 }
@@ -15,7 +14,7 @@ class _NavDrawerState extends State<NavDrawer> {
   final List<DrawerItem> drawer = [
     DrawerItem('Favorite Books', Icons.book, FavBook()),
     DrawerItem('My Cart', Icons.shopping_cart, MyCart()),
-    DrawerItem('User Profile', Icons.person, FavBook()),
+    DrawerItem('User Profile', Icons.person, UserPage()),
   ];
 
   _launchURL(String url) async {
@@ -46,13 +45,13 @@ class _NavDrawerState extends State<NavDrawer> {
       ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(24, 48, 24, 12),
-
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(right: MediaQuery.of(context).size.width * 0.3),
+              padding: EdgeInsets.only(
+                  right: MediaQuery.of(context).size.width * 0.3),
               child: Image.asset("./assets/images/logo.png"),
             ),
             Divider(
@@ -65,7 +64,9 @@ class _NavDrawerState extends State<NavDrawer> {
                   return InkWell(
                     onTap: () {
                       Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => drawer[index].widget));
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => drawer[index].widget));
                     },
                     child: Container(
                       margin: EdgeInsets.all(5),
@@ -80,7 +81,8 @@ class _NavDrawerState extends State<NavDrawer> {
                             ),
                           ),
                           Text(drawer[index].name,
-                              style: GoogleFonts.poppins(fontSize: 18, color: Colors.white))
+                              style: GoogleFonts.poppins(
+                                  fontSize: 18, color: Colors.white))
                         ],
                       ),
                     ),
@@ -111,7 +113,8 @@ class _NavDrawerState extends State<NavDrawer> {
                         ),
                         Text(
                           "Visit My Portfolio",
-                          style: GoogleFonts.poppins(fontSize: 18, color: Colors.white),
+                          style: GoogleFonts.poppins(
+                              fontSize: 18, color: Colors.white),
                         ),
                       ],
                     ),

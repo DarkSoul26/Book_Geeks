@@ -178,6 +178,26 @@ ADDED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\ma
 		ADDED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\main\AndroidManifest.xml:39:13-30
 	android:name
 		ADDED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\main\AndroidManifest.xml:38:13-44
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\main\AndroidManifest.xml:41:3-64
+MERGED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\main\AndroidManifest.xml:41:3-64
+MERGED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\main\AndroidManifest.xml:41:3-64
+MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\20c92a9eacc34f0af3135437a9ce4824\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\20c92a9eacc34f0af3135437a9ce4824\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\2562ea70dfdfec13b3abf39f278c87f6\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\2562ea70dfdfec13b3abf39f278c87f6\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\71428cc48cdc7c37a120f0fd6ba5393b\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\71428cc48cdc7c37a120f0fd6ba5393b\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\26ef4bb110b83fd88e96e0e6f6c09f01\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\26ef4bb110b83fd88e96e0e6f6c09f01\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\8330784ef1caab2288c9e29b2a5416a8\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\8330784ef1caab2288c9e29b2a5416a8\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b46f2dc3c436740a283071b1314c2ca6\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b46f2dc3c436740a283071b1314c2ca6\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ec6b675465bd1b1bf57819df90b62275\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ec6b675465bd1b1bf57819df90b62275\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\main\AndroidManifest.xml:41:20-62
 uses-sdk
 INJECTED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\main\AndroidManifest.xml
@@ -306,24 +326,6 @@ INJECTED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src
 	android:minSdkVersion
 		INJECTED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\debug\AndroidManifest.xml
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\debug\AndroidManifest.xml:6:5-66
-MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\20c92a9eacc34f0af3135437a9ce4824\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\20c92a9eacc34f0af3135437a9ce4824\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\2562ea70dfdfec13b3abf39f278c87f6\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\2562ea70dfdfec13b3abf39f278c87f6\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:14:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\71428cc48cdc7c37a120f0fd6ba5393b\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\71428cc48cdc7c37a120f0fd6ba5393b\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\26ef4bb110b83fd88e96e0e6f6c09f01\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\26ef4bb110b83fd88e96e0e6f6c09f01\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\8330784ef1caab2288c9e29b2a5416a8\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\8330784ef1caab2288c9e29b2a5416a8\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b46f2dc3c436740a283071b1314c2ca6\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\b46f2dc3c436740a283071b1314c2ca6\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ec6b675465bd1b1bf57819df90b62275\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\ec6b675465bd1b1bf57819df90b62275\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\android\app\src\debug\AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:firebase_auth] C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:cloud_firestore] C:\Users\DELL\Desktop\PICT\radiance' 21\Book_Geeks\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
