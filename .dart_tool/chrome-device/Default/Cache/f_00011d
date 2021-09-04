@@ -1,0 +1,296 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/animation/animation_controller.dart', 'packages/flutter/src/animation/listener_helpers.dart', 'packages/shared_preferences/shared_preferences.dart', 'packages/flutter/src/material/page.dart', 'packages/book_geeks/pages/welcome/login.dart', 'packages/book_geeks/pages/home/bookstore.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart'], (function load__packages__book_geeks__pages__welcome__animation__splash_screen_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__animation__animation_controller$46dart, packages__flutter__src__animation__listener_helpers$46dart, packages__shared_preferences__shared_preferences$46dart, packages__flutter__src__material__page$46dart, packages__book_geeks__pages__welcome__login$46dart, packages__book_geeks__pages__home__bookstore$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const transitions = packages__flutter__src__widgets__widget_span$46dart.src__widgets__transitions;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const ticker_provider = packages__flutter__src__widgets__widget_span$46dart.src__widgets__ticker_provider;
+  const animation_controller = packages__flutter__src__animation__animation_controller$46dart.src__animation__animation_controller;
+  const tween = packages__flutter__src__animation__listener_helpers$46dart.src__animation__tween;
+  const animation = packages__flutter__src__animation__listener_helpers$46dart.src__animation__animation;
+  const shared_preferences = packages__shared_preferences__shared_preferences$46dart.shared_preferences;
+  const page = packages__flutter__src__material__page$46dart.src__material__page;
+  const login = packages__book_geeks__pages__welcome__login$46dart.pages__welcome__login;
+  const home = packages__book_geeks__pages__home__bookstore$46dart.pages__home__home;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  var splash_screen = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    doubleL: () => (T.doubleL = dart.constFn(dart.legacy(core.double)))(),
+    TweenOfdoubleL: () => (T.TweenOfdoubleL = dart.constFn(tween.Tween$(T.doubleL())))(),
+    ObjectL: () => (T.ObjectL = dart.constFn(dart.legacy(core.Object)))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    LoginPageL: () => (T.LoginPageL = dart.constFn(dart.legacy(login.LoginPage)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    BuildContextLToLoginPageL: () => (T.BuildContextLToLoginPageL = dart.constFn(dart.fnType(T.LoginPageL(), [T.BuildContextL()])))(),
+    HomeL: () => (T.HomeL = dart.constFn(dart.legacy(home.Home)))(),
+    BuildContextLToHomeL: () => (T.BuildContextLToHomeL = dart.constFn(dart.fnType(T.HomeL(), [T.BuildContextL()])))(),
+    FutureOfNull: () => (T.FutureOfNull = dart.constFn(async.Future$(core.Null)))(),
+    FutureLOfNull: () => (T.FutureLOfNull = dart.constFn(dart.legacy(T.FutureOfNull())))(),
+    VoidToFutureLOfNull: () => (T.VoidToFutureLOfNull = dart.constFn(dart.fnType(T.FutureLOfNull(), [])))(),
+    AnimationStatusL: () => (T.AnimationStatusL = dart.constFn(dart.legacy(animation.AnimationStatus)))(),
+    AnimationStatusLToNull: () => (T.AnimationStatusLToNull = dart.constFn(dart.fnType(core.Null, [T.AnimationStatusL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C1() {
+      return C[1] = dart.constList([], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 62,
+        [_Location_line]: 30,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/PICT/radiance'%2021/Book_Geeks/lib/pages/welcome/animation/splash_screen.dart"
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 62,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/PICT/radiance'%2021/Book_Geeks/lib/pages/welcome/animation/splash_screen.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 36,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 56,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/PICT/radiance'%2021/Book_Geeks/lib/pages/welcome/animation/splash_screen.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "opacity",
+        [_Location_column]: 13,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/PICT/radiance'%2021/Book_Geeks/lib/pages/welcome/animation/splash_screen.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 53,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/PICT/radiance'%2021/Book_Geeks/lib/pages/welcome/animation/splash_screen.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15, C[16] || CT.C16], T._LocationL());
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/PICT/radiance'%2021/Book_Geeks/lib/pages/welcome/animation/splash_screen.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 50,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/PICT/radiance'%2021/Book_Geeks/lib/pages/welcome/animation/splash_screen.dart"
+      });
+    }
+  }, false);
+  var C = Array(20).fill(void 0);
+  var I = ["package:book_geeks/pages/welcome/animation/splash_screen.dart"];
+  splash_screen.Splash = class Splash extends framework.StatefulWidget {
+    createState() {
+      return new splash_screen._SplashState.new();
+    }
+  };
+  (splash_screen.Splash.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    splash_screen.Splash.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = splash_screen.Splash.prototype;
+  dart.addTypeTests(splash_screen.Splash);
+  dart.addTypeCaches(splash_screen.Splash);
+  dart.setMethodSignature(splash_screen.Splash, () => ({
+    __proto__: dart.getMethods(splash_screen.Splash.__proto__),
+    createState: dart.fnType(dart.legacy(splash_screen._SplashState), [])
+  }));
+  dart.setLibraryUri(splash_screen.Splash, I[0]);
+  dart.defineLazy(splash_screen.Splash, {
+    /*splash_screen.Splash.routeName*/get routeName() {
+      return "/splash";
+    }
+  }, true);
+  var _fadeInFadeOut = dart.privateName(splash_screen, "_fadeInFadeOut");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const State_TickerProviderStateMixin$36 = class State_TickerProviderStateMixin extends framework.State$(dart.legacy(splash_screen.Splash)) {};
+  (State_TickerProviderStateMixin$36.new = function() {
+    ticker_provider.TickerProviderStateMixin$(dart.legacy(splash_screen.Splash))[dart.mixinNew].call(this);
+    State_TickerProviderStateMixin$36.__proto__.new.call(this);
+  }).prototype = State_TickerProviderStateMixin$36.prototype;
+  dart.applyMixin(State_TickerProviderStateMixin$36, ticker_provider.TickerProviderStateMixin$(dart.legacy(splash_screen.Splash)));
+  splash_screen._SplashState = class _SplashState extends State_TickerProviderStateMixin$36 {
+    initState() {
+      this.animation = new animation_controller.AnimationController.new({vsync: this, duration: new core.Duration.new({seconds: 1})});
+      this[_fadeInFadeOut] = new (T.TweenOfdoubleL()).new({begin: 0.2, end: 1.0}).animate(this.animation);
+      async.Timer.new(new core.Duration.new({seconds: 6}), dart.fn(() => async.async(core.Null, (function*() {
+        let pref = (yield shared_preferences.SharedPreferences.getInstance());
+        let token = pref.getString("token");
+        if (token == null) {
+          navigator.Navigator.pushReplacement(dart.dynamic, T.ObjectL(), this.context, new page.MaterialPageRoute.new({builder: dart.fn(context => new login.LoginPage.new({$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), T.BuildContextLToLoginPageL())}));
+        } else {
+          navigator.Navigator.pushReplacement(dart.dynamic, T.ObjectL(), this.context, new page.MaterialPageRoute.new({builder: dart.fn(context => new home.Home.new({$creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), T.BuildContextLToHomeL())}));
+        }
+      }).bind(this)), T.VoidToFutureLOfNull()));
+      this.animation.addStatusListener(dart.fn(status => {
+        if (status == animation.AnimationStatus.completed) {
+          this.animation.reverse();
+        } else if (status == animation.AnimationStatus.dismissed) {
+          this.animation.forward();
+        }
+      }, T.AnimationStatusLToNull()));
+      this.animation.forward();
+      super.initState();
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({body: new container.Container.new({color: colors.Colors.black, child: new basic.Center.new({child: new transitions.FadeTransition.new({opacity: this[_fadeInFadeOut], child: new image.Image.asset("./assets/images/logo.png", {$creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), $creationLocationd_0dea112b090073317d4: C[13] || CT.C13}), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17});
+    }
+  };
+  (splash_screen._SplashState.new = function() {
+    this.animation = null;
+    this[_fadeInFadeOut] = null;
+    splash_screen._SplashState.__proto__.new.call(this);
+    ;
+  }).prototype = splash_screen._SplashState.prototype;
+  dart.addTypeTests(splash_screen._SplashState);
+  dart.addTypeCaches(splash_screen._SplashState);
+  dart.setMethodSignature(splash_screen._SplashState, () => ({
+    __proto__: dart.getMethods(splash_screen._SplashState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(splash_screen._SplashState, I[0]);
+  dart.setFieldSignature(splash_screen._SplashState, () => ({
+    __proto__: dart.getFields(splash_screen._SplashState.__proto__),
+    animation: dart.fieldType(dart.legacy(animation_controller.AnimationController)),
+    [_fadeInFadeOut]: dart.fieldType(dart.legacy(animation.Animation$(dart.legacy(core.double))))
+  }));
+  dart.trackLibraries("packages/book_geeks/pages/welcome/animation/splash_screen.dart", {
+    "package:book_geeks/pages/welcome/animation/splash_screen.dart": splash_screen
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["splash_screen.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAWgC;IAAc;;;;;;EAC9C;;;;;;;;;MAJe,8BAAS;;;;;;;;;;;;;;;;;;AAcnB,MAHD,iBAAY,yDACH,gBACG,gCAAkB;AAEuC,MAArE,uBAAiB,AAAkC,qCAAb,UAAU,cAAW;AAWzD,MAVF,gBAAM,gCAAkB,KAAI;AACpB,oBAAO,MAAwB;AAC9B,oBAAQ,AAAK,IAAD,WAAW;AAC9B,YAAI,AAAM,KAAD;AAE2D,UADxD,+DACN,cAAS,yCAA2B,QAAC,WAAY;;AAGQ,UADnD,+DACN,cAAS,yCAA2B,QAAC,WAAY;;MAExD;AAQC,MANF,AAAU,iCAAkB,QAAC;AAC3B,YAAI,AAAO,MAAD,IAAoB;AACT,UAAnB,AAAU;cACL,KAAI,AAAO,MAAD,IAAoB;AAChB,UAAnB,AAAU;;;AAGK,MAAnB,AAAU;AACO,MAAX;IACR;UAG0B;AACxB,YAAO,kCACC,oCACU,4BACP,6BACE,6CACI,6BACE,sBAAY;IAKjC;;;IA7CoB;IACF;;;EA6CpB","file":"../../../../../../../../../../packages/book_geeks/pages/welcome/animation/splash_screen.dart.lib.js"}');
+  // Exports:
+  return {
+    pages__welcome__animation__splash_screen: splash_screen
+  };
+}));
+
+//# sourceMappingURL=splash_screen.dart.lib.js.map

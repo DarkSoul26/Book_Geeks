@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\DELL\\Desktop\\Flutter\\book_geeks\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\DELL\\Desktop\\Flutter\\book_geeks\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

@@ -1,0 +1,427 @@
+define(['dart_sdk', 'packages/flutter/src/animation/curves.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/animation/listener_helpers.dart', 'packages/flutter/src/animation/animation_controller.dart'], (function load__packages__simple_animations__simple_animations__controlled_animation_dart(dart_sdk, packages__flutter__src__animation__curves$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__animation__listener_helpers$46dart, packages__flutter__src__animation__animation_controller$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const curves = packages__flutter__src__animation__curves$46dart.src__animation__curves;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const ticker_provider = packages__flutter__src__widgets__widget_span$46dart.src__widgets__ticker_provider;
+  const tween = packages__flutter__src__animation__listener_helpers$46dart.src__animation__tween;
+  const animation = packages__flutter__src__animation__listener_helpers$46dart.src__animation__animation;
+  const animation_controller = packages__flutter__src__animation__animation_controller$46dart.src__animation__animation_controller;
+  var controlled_animation = Object.create(dart.library);
+  var $toString = dartx.toString;
+  dart._checkModuleNullSafetyMode(false);
+  var T$ = {
+    PlaybackL: () => (T$.PlaybackL = dart.constFn(dart.legacy(controlled_animation.Playback)))(),
+    VoidToNull: () => (T$.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    WidgetL: () => (T$.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    BuildContextL: () => (T$.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    _LocationL: () => (T$._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: controlled_animation.Playback.prototype,
+        [_name$]: "Playback.PAUSE",
+        index: 0
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: controlled_animation.Playback.prototype,
+        [_name$]: "Playback.PLAY_FORWARD",
+        index: 1
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: controlled_animation.Playback.prototype,
+        [_name$]: "Playback.PLAY_REVERSE",
+        index: 2
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: controlled_animation.Playback.prototype,
+        [_name$]: "Playback.START_OVER_FORWARD",
+        index: 3
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: controlled_animation.Playback.prototype,
+        [_name$]: "Playback.START_OVER_REVERSE",
+        index: 4
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: controlled_animation.Playback.prototype,
+        [_name$]: "Playback.LOOP",
+        index: 5
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: controlled_animation.Playback.prototype,
+        [_name$]: "Playback.MIRROR",
+        index: 6
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[0] || CT.C0, C[1] || CT.C1, C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4, C[5] || CT.C5, C[6] || CT.C6], T$.PlaybackL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: curves._Linear.prototype
+      });
+    },
+    get C10() {
+      return C[10] = dart.constList([], T$._LocationL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[10] || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 198,
+        [_Location_file]: "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/simple_animations-1.3.12/lib/simple_animations/controlled_animation.dart"
+      });
+    }
+  }, false);
+  var C = Array(11).fill(void 0);
+  var I = [
+    "package:simple_animations/simple_animations/controlled_animation.dart",
+    "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/simple_animations-1.3.12/lib/simple_animations/controlled_animation.dart"
+  ];
+  var _name$ = dart.privateName(controlled_animation, "_name");
+  controlled_animation.Playback = class Playback extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (controlled_animation.Playback.new = function(index, _name) {
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = controlled_animation.Playback.prototype;
+  dart.addTypeTests(controlled_animation.Playback);
+  dart.addTypeCaches(controlled_animation.Playback);
+  dart.setMethodSignature(controlled_animation.Playback, () => ({
+    __proto__: dart.getMethods(controlled_animation.Playback.__proto__),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setLibraryUri(controlled_animation.Playback, I[0]);
+  dart.setFieldSignature(controlled_animation.Playback, () => ({
+    __proto__: dart.getFields(controlled_animation.Playback.__proto__),
+    index: dart.finalFieldType(dart.legacy(core.int)),
+    [_name$]: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.defineExtensionMethods(controlled_animation.Playback, ['toString']);
+  controlled_animation.Playback.PAUSE = C[0] || CT.C0;
+  controlled_animation.Playback.PLAY_FORWARD = C[1] || CT.C1;
+  controlled_animation.Playback.PLAY_REVERSE = C[2] || CT.C2;
+  controlled_animation.Playback.START_OVER_FORWARD = C[3] || CT.C3;
+  controlled_animation.Playback.START_OVER_REVERSE = C[4] || CT.C4;
+  controlled_animation.Playback.LOOP = C[5] || CT.C5;
+  controlled_animation.Playback.MIRROR = C[6] || CT.C6;
+  controlled_animation.Playback.values = C[7] || CT.C7;
+  var playback$ = dart.privateName(controlled_animation, "ControlledAnimation.playback");
+  var tween$ = dart.privateName(controlled_animation, "ControlledAnimation.tween");
+  var curve$ = dart.privateName(controlled_animation, "ControlledAnimation.curve");
+  var duration$ = dart.privateName(controlled_animation, "ControlledAnimation.duration");
+  var delay$ = dart.privateName(controlled_animation, "ControlledAnimation.delay");
+  var builder$ = dart.privateName(controlled_animation, "ControlledAnimation.builder");
+  var builderWithChild$ = dart.privateName(controlled_animation, "ControlledAnimation.builderWithChild");
+  var child$ = dart.privateName(controlled_animation, "ControlledAnimation.child");
+  var animationControllerStatusListener$ = dart.privateName(controlled_animation, "ControlledAnimation.animationControllerStatusListener");
+  var startPosition$ = dart.privateName(controlled_animation, "ControlledAnimation.startPosition");
+  const _is_ControlledAnimation_default = Symbol('_is_ControlledAnimation_default');
+  controlled_animation.ControlledAnimation$ = dart.generic(T => {
+    var TL = () => (TL = dart.constFn(dart.legacy(T)))();
+    var _ControlledAnimationStateOfTL = () => (_ControlledAnimationStateOfTL = dart.constFn(controlled_animation._ControlledAnimationState$(TL())))();
+    class ControlledAnimation extends framework.StatefulWidget {
+      get playback() {
+        return this[playback$];
+      }
+      set playback(value) {
+        super.playback = value;
+      }
+      get tween() {
+        return this[tween$];
+      }
+      set tween(value) {
+        super.tween = value;
+      }
+      get curve() {
+        return this[curve$];
+      }
+      set curve(value) {
+        super.curve = value;
+      }
+      get duration() {
+        return this[duration$];
+      }
+      set duration(value) {
+        super.duration = value;
+      }
+      get delay() {
+        return this[delay$];
+      }
+      set delay(value) {
+        super.delay = value;
+      }
+      get builder() {
+        return this[builder$];
+      }
+      set builder(value) {
+        super.builder = value;
+      }
+      get builderWithChild() {
+        return this[builderWithChild$];
+      }
+      set builderWithChild(value) {
+        super.builderWithChild = value;
+      }
+      get child() {
+        return this[child$];
+      }
+      set child(value) {
+        super.child = value;
+      }
+      get animationControllerStatusListener() {
+        return this[animationControllerStatusListener$];
+      }
+      set animationControllerStatusListener(value) {
+        super.animationControllerStatusListener = value;
+      }
+      get startPosition() {
+        return this[startPosition$];
+      }
+      set startPosition(value) {
+        super.startPosition = value;
+      }
+      createState() {
+        return new (_ControlledAnimationStateOfTL()).new();
+      }
+    }
+    (ControlledAnimation.new = function(opts) {
+      let playback = opts && 'playback' in opts ? opts.playback : C[1] || CT.C1;
+      let tween = opts && 'tween' in opts ? opts.tween : null;
+      let curve = opts && 'curve' in opts ? opts.curve : C[8] || CT.C8;
+      let duration = opts && 'duration' in opts ? opts.duration : null;
+      let delay = opts && 'delay' in opts ? opts.delay : null;
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let builderWithChild = opts && 'builderWithChild' in opts ? opts.builderWithChild : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let animationControllerStatusListener = opts && 'animationControllerStatusListener' in opts ? opts.animationControllerStatusListener : null;
+      let startPosition = opts && 'startPosition' in opts ? opts.startPosition : 0;
+      let key = opts && 'key' in opts ? opts.key : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[playback$] = playback;
+      this[tween$] = tween;
+      this[curve$] = curve;
+      this[duration$] = duration;
+      this[delay$] = delay;
+      this[builder$] = builder;
+      this[builderWithChild$] = builderWithChild;
+      this[child$] = child;
+      this[animationControllerStatusListener$] = animationControllerStatusListener;
+      this[startPosition$] = startPosition;
+      if (!(duration != null)) dart.assertFailed("Please set property duration. Example: Duration(milliseconds: 500)", I[1], 91, 16, "duration != null");
+      if (!(tween != null)) dart.assertFailed("Please set property tween. Example: Tween(from: 0.0, to: 100.0)", I[1], 93, 16, "tween != null");
+      if (!(builderWithChild != null && child != null && builder == null || builder != null && builderWithChild == null && child == null)) dart.assertFailed("Either use just builder and keep buildWithChild and child null. " + "Or keep builder null and set a builderWithChild and a child.", I[1], 96, 13, "(builderWithChild != null && child != null && builder == null) ||\r\n                (builder != null && builderWithChild == null && child == null)");
+      if (!(dart.notNull(startPosition) >= 0 && dart.notNull(startPosition) <= 1)) dart.assertFailed("The property startPosition " + "must have a value between 0.0 and 1.0.", I[1], 101, 13, "startPosition >= 0 && startPosition <= 1");
+      ControlledAnimation.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = ControlledAnimation.prototype;
+    dart.addTypeTests(ControlledAnimation);
+    ControlledAnimation.prototype[_is_ControlledAnimation_default] = true;
+    dart.addTypeCaches(ControlledAnimation);
+    dart.setMethodSignature(ControlledAnimation, () => ({
+      __proto__: dart.getMethods(ControlledAnimation.__proto__),
+      createState: dart.fnType(dart.legacy(controlled_animation._ControlledAnimationState$(dart.legacy(T))), [])
+    }));
+    dart.setLibraryUri(ControlledAnimation, I[0]);
+    dart.setFieldSignature(ControlledAnimation, () => ({
+      __proto__: dart.getFields(ControlledAnimation.__proto__),
+      playback: dart.finalFieldType(dart.legacy(controlled_animation.Playback)),
+      tween: dart.finalFieldType(dart.legacy(tween.Animatable$(dart.legacy(T)))),
+      curve: dart.finalFieldType(dart.legacy(curves.Curve)),
+      duration: dart.finalFieldType(dart.legacy(core.Duration)),
+      delay: dart.finalFieldType(dart.legacy(core.Duration)),
+      builder: dart.finalFieldType(dart.legacy(dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext), dart.legacy(T)]))),
+      builderWithChild: dart.finalFieldType(dart.legacy(dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext), dart.legacy(framework.Widget), dart.legacy(T)]))),
+      child: dart.finalFieldType(dart.legacy(framework.Widget)),
+      animationControllerStatusListener: dart.finalFieldType(dart.legacy(dart.fnType(dart.void, [dart.legacy(animation.AnimationStatus)]))),
+      startPosition: dart.finalFieldType(dart.legacy(core.double))
+    }));
+    return ControlledAnimation;
+  });
+  controlled_animation.ControlledAnimation = controlled_animation.ControlledAnimation$();
+  dart.addTypeTests(controlled_animation.ControlledAnimation, _is_ControlledAnimation_default);
+  var _controller = dart.privateName(controlled_animation, "_controller");
+  var _animation = dart.privateName(controlled_animation, "_animation");
+  var _isDisposed = dart.privateName(controlled_animation, "_isDisposed");
+  var _waitForDelay = dart.privateName(controlled_animation, "_waitForDelay");
+  var _isCurrentlyMirroring = dart.privateName(controlled_animation, "_isCurrentlyMirroring");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const _is__ControlledAnimationState_default = Symbol('_is__ControlledAnimationState_default');
+  controlled_animation._ControlledAnimationState$ = dart.generic(T => {
+    var TL = () => (TL = dart.constFn(dart.legacy(T)))();
+    var ControlledAnimationOfTL = () => (ControlledAnimationOfTL = dart.constFn(controlled_animation.ControlledAnimation$(TL())))();
+    var ControlledAnimationLOfTL = () => (ControlledAnimationLOfTL = dart.constFn(dart.legacy(ControlledAnimationOfTL())))();
+    var BuildContextLAndTLToWidgetL = () => (BuildContextLAndTLToWidgetL = dart.constFn(dart.fnType(T$.WidgetL(), [T$.BuildContextL(), TL()])))();
+    var BuildContextLAndTLToLWidgetL = () => (BuildContextLAndTLToLWidgetL = dart.constFn(dart.legacy(BuildContextLAndTLToWidgetL())))();
+    var BuildContextLAndWidgetLAndTLToWidgetL = () => (BuildContextLAndWidgetLAndTLToWidgetL = dart.constFn(dart.fnType(T$.WidgetL(), [T$.BuildContextL(), T$.WidgetL(), TL()])))();
+    var BuildContextLAndWidgetLAndTLToLWidgetL = () => (BuildContextLAndWidgetLAndTLToLWidgetL = dart.constFn(dart.legacy(BuildContextLAndWidgetLAndTLToWidgetL())))();
+    const State_SingleTickerProviderStateMixin$36 = class State_SingleTickerProviderStateMixin extends framework.State$(dart.legacy(controlled_animation.ControlledAnimation$(dart.legacy(T)))) {};
+    (State_SingleTickerProviderStateMixin$36.new = function() {
+      ticker_provider.SingleTickerProviderStateMixin$(dart.legacy(controlled_animation.ControlledAnimation$(dart.legacy(T))))[dart.mixinNew].call(this);
+      State_SingleTickerProviderStateMixin$36.__proto__.new.call(this);
+    }).prototype = State_SingleTickerProviderStateMixin$36.prototype;
+    dart.applyMixin(State_SingleTickerProviderStateMixin$36, ticker_provider.SingleTickerProviderStateMixin$(dart.legacy(controlled_animation.ControlledAnimation$(dart.legacy(T)))));
+    class _ControlledAnimationState extends State_SingleTickerProviderStateMixin$36 {
+      initState() {
+        let t0;
+        this[_controller] = (t0 = new animation_controller.AnimationController.new({vsync: this, duration: this.widget.duration}), (() => {
+          t0.addListener(dart.fn(() => {
+            this.setState(dart.fn(() => {
+            }, T$.VoidToNull()));
+          }, T$.VoidToNull()));
+          t0.value = this.widget.startPosition;
+          return t0;
+        })());
+        this[_animation] = this.widget.tween.chain(new tween.CurveTween.new({curve: this.widget.curve})).animate(this[_controller]);
+        if (this.widget.animationControllerStatusListener != null) {
+          this[_controller].addStatusListener(this.widget.animationControllerStatusListener);
+        }
+        this.initialize();
+        super.initState();
+      }
+      initialize() {
+        return async.async(dart.void, (function* initialize() {
+          if (this.widget.delay != null) {
+            yield async.Future.delayed(this.widget.delay);
+          }
+          this[_waitForDelay] = false;
+          this.executeInstruction();
+        }).bind(this));
+      }
+      didUpdateWidget(oldWidget) {
+        ControlledAnimationLOfTL().as(oldWidget);
+        this[_controller].duration = this.widget.duration;
+        this[_animation] = this.widget.tween.chain(new tween.CurveTween.new({curve: this.widget.curve})).animate(this[_controller]);
+        this.executeInstruction();
+        super.didUpdateWidget(oldWidget);
+      }
+      executeInstruction() {
+        return async.async(dart.void, (function* executeInstruction() {
+          if (dart.test(this[_isDisposed]) || dart.test(this[_waitForDelay])) {
+            return;
+          }
+          if (this.widget.playback == controlled_animation.Playback.PAUSE) {
+            this[_controller].stop();
+          }
+          if (this.widget.playback == controlled_animation.Playback.PLAY_FORWARD) {
+            this[_controller].forward();
+          }
+          if (this.widget.playback == controlled_animation.Playback.PLAY_REVERSE) {
+            this[_controller].reverse();
+          }
+          if (this.widget.playback == controlled_animation.Playback.START_OVER_FORWARD) {
+            this[_controller].forward({from: 0.0});
+          }
+          if (this.widget.playback == controlled_animation.Playback.START_OVER_REVERSE) {
+            this[_controller].reverse({from: 1.0});
+          }
+          if (this.widget.playback == controlled_animation.Playback.LOOP) {
+            this[_controller].repeat();
+          }
+          if (this.widget.playback == controlled_animation.Playback.MIRROR && !dart.test(this[_isCurrentlyMirroring])) {
+            this[_isCurrentlyMirroring] = true;
+            this[_controller].repeat({reverse: true});
+          }
+          if (this.widget.playback != controlled_animation.Playback.MIRROR) {
+            this[_isCurrentlyMirroring] = false;
+          }
+        }).bind(this));
+      }
+      build(context) {
+        let t2, t1, t0, t3, t2$, t1$, t0$;
+        if (BuildContextLAndTLToLWidgetL().as(this.widget.builder) != null) {
+          t0 = this.widget;
+          t1 = context;
+          t2 = this[_animation].value;
+          return BuildContextLAndTLToLWidgetL().as(t0.builder)(t1, t2);
+        } else if (BuildContextLAndWidgetLAndTLToLWidgetL().as(this.widget.builderWithChild) != null && this.widget.child != null) {
+          t0$ = this.widget;
+          t1$ = context;
+          t2$ = this.widget.child;
+          t3 = this[_animation].value;
+          return BuildContextLAndWidgetLAndTLToLWidgetL().as(t0$.builderWithChild)(t1$, t2$, t3);
+        }
+        return new container.Container.new({$creationLocationd_0dea112b090073317d4: C[9] || CT.C9});
+      }
+      dispose() {
+        this[_isDisposed] = true;
+        this[_controller].dispose();
+        super.dispose();
+      }
+    }
+    (_ControlledAnimationState.new = function() {
+      this[_controller] = null;
+      this[_animation] = null;
+      this[_isDisposed] = false;
+      this[_waitForDelay] = true;
+      this[_isCurrentlyMirroring] = false;
+      _ControlledAnimationState.__proto__.new.call(this);
+      ;
+    }).prototype = _ControlledAnimationState.prototype;
+    dart.addTypeTests(_ControlledAnimationState);
+    _ControlledAnimationState.prototype[_is__ControlledAnimationState_default] = true;
+    dart.addTypeCaches(_ControlledAnimationState);
+    dart.setMethodSignature(_ControlledAnimationState, () => ({
+      __proto__: dart.getMethods(_ControlledAnimationState.__proto__),
+      initialize: dart.fnType(dart.void, []),
+      didUpdateWidget: dart.fnType(dart.void, [dart.legacy(core.Object)]),
+      executeInstruction: dart.fnType(dart.void, []),
+      build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+    }));
+    dart.setLibraryUri(_ControlledAnimationState, I[0]);
+    dart.setFieldSignature(_ControlledAnimationState, () => ({
+      __proto__: dart.getFields(_ControlledAnimationState.__proto__),
+      [_controller]: dart.fieldType(dart.legacy(animation_controller.AnimationController)),
+      [_animation]: dart.fieldType(dart.legacy(animation.Animation$(dart.legacy(T)))),
+      [_isDisposed]: dart.fieldType(dart.legacy(core.bool)),
+      [_waitForDelay]: dart.fieldType(dart.legacy(core.bool)),
+      [_isCurrentlyMirroring]: dart.fieldType(dart.legacy(core.bool))
+    }));
+    return _ControlledAnimationState;
+  });
+  controlled_animation._ControlledAnimationState = controlled_animation._ControlledAnimationState$();
+  dart.addTypeTests(controlled_animation._ControlledAnimationState, _is__ControlledAnimationState_default);
+  dart.trackLibraries("packages/simple_animations/simple_animations/controlled_animation.dart", {
+    "package:simple_animations/simple_animations/controlled_animation.dart": controlled_animation
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["controlled_animation.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IA0BA;;uDAvBK;;;;EAuBL;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MAwCiB;;;;;;MACK;;;;;;MACR;;;;;;MACG;;;;;;MACA;;;;;;MACmD;;;;;;MAE9D;;;;;;MACS;;;;;;MACiB;;;;;;MACjB;;;;;;;AA8BiC;MAA8B;;;UA3BlE;UACD;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACD;;MAVE;MACD;MACA;MACA;MACA;MACA;MACA;MACA;MACA;MACA;YAEI,AAAS,QAAD,6BACX;YACG,AAAM,KAAD,6BACR;YAEC,AAA8D,gBAA9C,YAAY,KAAK,YAAY,AAAQ,OAAD,YAChD,OAAO,YAAY,AAAiB,gBAAD,YAAY,AAAM,KAAD,6BAAS,AAClE,qEACA;YAEc,AAAK,aAAnB,aAAa,KAAI,KAAmB,aAAd,aAAa,KAAI,sBAAC,AACxC,gCACA;AACJ,yDAAW,GAAG;;IAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAoBa,QAJhC,0BAAc,yDAA2B,gBAAgB,AAAO,wBAAlD;AACV,yBAAY;AACG,YAAf,cAAS;;;AAET,qBAAQ,AAAO;;;AAIM,QAFzB,mBAAa,AAAO,AACf,AACA,wBADM,iCAAkB,AAAO,6BACvB;AAEb,YAAI,AAAO;AAC8D,UAAvE,AAAY,oCAAkB,AAAO;;AAG3B,QAAZ;AACiB,QAAX;MACR;;AAEe;AACb,cAAI,AAAO;AACyB,YAAlC,MAAa,qBAAQ,AAAO;;AAET,UAArB,sBAAgB;AACI,UAApB;QACF;;;sCAG4C;AACJ,QAAtC,AAAY,6BAAW,AAAO;AAIL,QAFzB,mBAAa,AAAO,AACf,AACA,wBADM,iCAAkB,AAAO,6BACvB;AAEO,QAApB;AACgC,QAA1B,sBAAgB,SAAS;MACjC;;AAEuB;AACrB,wBAAI,gCAAe;AACjB;;AAGF,cAAI,AAAO,AAAS,wBAAY;AACZ,YAAlB,AAAY;;AAEd,cAAI,AAAO,AAAS,wBAAY;AACT,YAArB,AAAY;;AAEd,cAAI,AAAO,AAAS,wBAAY;AACT,YAArB,AAAY;;AAEd,cAAI,AAAO,AAAS,wBAAY;AACA,YAA9B,AAAY,iCAAc;;AAE5B,cAAI,AAAO,AAAS,wBAAY;AACA,YAA9B,AAAY,iCAAc;;AAE5B,cAAI,AAAO,AAAS,wBAAY;AACV,YAApB,AAAY;;AAEd,cAAI,AAAO,AAAS,wBAAY,mDAAW;AACb,YAA5B,8BAAwB;AACS,YAAjC,AAAY,mCAAgB;;AAG9B,cAAI,AAAO,wBAAqB;AACD,YAA7B,8BAAwB;;QAE5B;;YAG0B;;AACxB,8CAAI,AAAO;AACT,eAAO;eAAe,OAAO;eAAE,AAAW;gBAArB,mCAAP;cACT,iDAAI,AAAO,yCAA4B,AAAO;AACnD,gBAAO;gBAAwB,OAAO;gBAAE,AAAO;eAAO,AAAW;gBAAnC,6CAAhB;;AAEhB,cAAO;MACT;;AAIoB,QAAlB,oBAAc;AACO,QAArB,AAAY;AACG,QAAT;MACR;;;MA9FoB;MACP;MACR,oBAAc;MACd,sBAAgB;MAChB,8BAAwB;;;IA2F/B","file":"../../../../../../../../packages/simple_animations/simple_animations/controlled_animation.dart.lib.js"}');
+  // Exports:
+  return {
+    simple_animations__controlled_animation: controlled_animation
+  };
+}));
+
+//# sourceMappingURL=controlled_animation.dart.lib.js.map
