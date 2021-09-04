@@ -1,0 +1,82 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+ProcessException: ProcessException: Process exited abnormally:
+adb.exe: error: device '4547e1c20305' not found
+  Command: C:\Users\DELL\AppData\Local\Android\sdk\platform-tools\adb.exe -s 4547e1c20305 forward --remove tcp:59236
+
+```
+#0      RunResult.throwException (package:flutter_tools/src/base/process.dart:124:5)
+#1      AndroidDevicePortForwarder.unforward (package:flutter_tools/src/android/android_device.dart:1322:15)
+<asynchronous suspension>
+#2      AndroidDevicePortForwarder.dispose (package:flutter_tools/src/android/android_device.dart:1328:7)
+<asynchronous suspension>
+#3      AndroidDevice.dispose (package:flutter_tools/src/android/android_device.dart:825:5)
+<asynchronous suspension>
+#4      HotRunner.cleanupAtFinish (package:flutter_tools/src/run_hot.dart:1166:7)
+<asynchronous suspension>
+#5      ResidentRunner.waitForAppToFinish (package:flutter_tools/src/resident_runner.dart:1326:5)
+<asynchronous suspension>
+#6      HotRunner.attach (package:flutter_tools/src/run_hot.dart:304:16)
+<asynchronous suspension>
+#7      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:656:26)
+<asynchronous suspension>
+#8      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1043:27)
+<asynchronous suspension>
+#9      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#10     CommandRunner.runCommand (package:args/command_runner.dart:196:13)
+<asynchronous suspension>
+#11     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:284:9)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#13     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:232:5)
+<asynchronous suspension>
+#14     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#16     main (package:flutter_tools/executable.dart:91:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.2.3, on Microsoft Windows [Version 10.0.19043.1165], locale en-IN)
+    • Flutter version 2.2.3 at C:\src\flutter
+    • Framework revision f4abaa0735 (9 weeks ago), 2021-07-01 12:46:11 -0700
+    • Engine revision 241c87ad80
+    • Dart version 2.13.4
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+    • Android SDK at C:\Users\DELL\AppData\Local\Android\sdk
+    • Platform android-30, build-tools 30.0.3
+    • Java binary at: C:\Program Files\Java\jdk-14\bin\java
+    • Java version Java(TM) SE Runtime Environment (build 14+36-1461)
+    • All Android licenses accepted.
+
+[✗] Chrome - develop for the web (Cannot find Chrome executable at .\Google\Chrome\Application\chrome.exe)
+    ! Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/windows#android-setup for detailed instructions).
+
+[✓] VS Code (version 1.60.0)
+    • VS Code at C:\Users\DELL\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.23.0
+
+[✓] Connected device (2 available)
+    • Redmi 6 Pro (mobile) • 4547e1c20305 • android-arm64  • Android 9 (API 28)
+    • Edge (web)           • edge         • web-javascript • Microsoft Edge 92.0.902.84
+
+! Doctor found issues in 2 categories.
+```

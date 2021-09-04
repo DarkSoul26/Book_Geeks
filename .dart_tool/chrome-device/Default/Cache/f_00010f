@@ -1,0 +1,2536 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/provider/src/provider.dart', 'packages/book_geeks/services/auth_service.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/widgets/single_child_scroll_view.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/book_geeks/pages/Welcome/animation/FadeAnimation.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/painting/rounded_rectangle_border.dart', 'packages/flutter/src/material/page.dart', 'packages/flutter/src/material/text_field.dart', 'packages/flutter/src/material/input_border.dart', 'packages/flutter/src/painting/decoration_image.dart', 'packages/flutter/src/painting/image_resolution.dart', 'packages/flutter/src/painting/box_fit.dart'], (function load__packages__book_geeks__pages__Welcome__signup_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__provider__src__provider$46dart, packages__book_geeks__services__auth_service$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__widgets__single_child_scroll_view$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__rendering__flex$46dart, packages__book_geeks__pages__Welcome__animation__FadeAnimation$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__painting__rounded_rectangle_border$46dart, packages__flutter__src__material__page$46dart, packages__flutter__src__material__text_field$46dart, packages__flutter__src__material__input_border$46dart, packages__flutter__src__painting__decoration_image$46dart, packages__flutter__src__painting__image_resolution$46dart, packages__flutter__src__painting__box_fit$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const editable_text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__editable_text;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const provider = packages__provider__src__provider$46dart.src__provider;
+  const auth_service = packages__book_geeks__services__auth_service$46dart.services__auth_service;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const material_button = packages__flutter__src__material__icon_button$46dart.src__material__material_button;
+  const input_decorator = packages__flutter__src__material__icon_button$46dart.src__material__input_decorator;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const single_child_scroll_view = packages__flutter__src__widgets__single_child_scroll_view$46dart.src__widgets__single_child_scroll_view;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const FadeAnimation = packages__book_geeks__pages__Welcome__animation__FadeAnimation$46dart.pages__Welcome__animation__FadeAnimation;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const rounded_rectangle_border = packages__flutter__src__painting__rounded_rectangle_border$46dart.src__painting__rounded_rectangle_border;
+  const page = packages__flutter__src__material__page$46dart.src__material__page;
+  const text_field = packages__flutter__src__material__text_field$46dart.src__material__text_field;
+  const input_border = packages__flutter__src__material__input_border$46dart.src__material__input_border;
+  const decoration_image = packages__flutter__src__painting__decoration_image$46dart.src__painting__decoration_image;
+  const image_resolution = packages__flutter__src__painting__image_resolution$46dart.src__painting__image_resolution;
+  const box_fit = packages__flutter__src__painting__box_fit$46dart.src__painting__box_fit;
+  var signup = Object.create(dart.library);
+  var login = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    AuthServiceL: () => (T.AuthServiceL = dart.constFn(dart.legacy(auth_service.AuthService)))(),
+    ObjectL: () => (T.ObjectL = dart.constFn(dart.legacy(core.Object)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    FutureOfNull: () => (T.FutureOfNull = dart.constFn(async.Future$(core.Null)))(),
+    FutureLOfNull: () => (T.FutureLOfNull = dart.constFn(dart.legacy(T.FutureOfNull())))(),
+    VoidToFutureLOfNull: () => (T.VoidToFutureLOfNull = dart.constFn(dart.fnType(T.FutureLOfNull(), [])))(),
+    LoginPageL: () => (T.LoginPageL = dart.constFn(dart.legacy(login.LoginPage)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    BuildContextLToLoginPageL: () => (T.BuildContextLToLoginPageL = dart.constFn(dart.fnType(T.LoginPageL(), [T.BuildContextL()])))(),
+    TextEditingControllerN: () => (T.TextEditingControllerN = dart.constFn(dart.nullable(editable_text.TextEditingController)))(),
+    SignupPageL: () => (T.SignupPageL = dart.constFn(dart.legacy(signup.SignupPage)))(),
+    BuildContextLToSignupPageL: () => (T.BuildContextLToSignupPageL = dart.constFn(dart.fnType(T.SignupPageL(), [T.BuildContextL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 28,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 44,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 54,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 11,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 11,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7, C[8] || CT.C8], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 24,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 9,
+        [_Location_line]: 21,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "brightness",
+        [_Location_column]: 9,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 9,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "leading",
+        [_Location_column]: 9,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.constList([C[11] || CT.C11, C[12] || CT.C12, C[13] || CT.C13, C[14] || CT.C14], T._LocationL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[10] || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 20,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 41,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 52,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 36,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 33,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 36,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 28,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25], T._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 43,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 75,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28, C[29] || CT.C29], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 38,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 33,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 38,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32, C[33] || CT.C33], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.constList([C[36] || CT.C36], T._LocationL());
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[35] || CT.C35,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 39,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 33,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 38,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.constList([C[39] || CT.C39, C[40] || CT.C40], T._LocationL());
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[38] || CT.C38,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 33,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 38,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.constList([C[43] || CT.C43, C[44] || CT.C44], T._LocationL());
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[42] || CT.C42,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 58,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 33,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 38,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.constList([C[47] || CT.C47, C[48] || CT.C48], T._LocationL());
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[46] || CT.C46,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 63,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C50() {
+      return C[50] = dart.constList([C[51] || CT.C51], T._LocationL());
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[50] || CT.C50,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 31,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 42,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.constList([C[54] || CT.C54, C[55] || CT.C55], T._LocationL());
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[53] || CT.C53,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 96,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "minWidth",
+        [_Location_column]: 19,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 19,
+        [_Location_line]: 83,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 19,
+        [_Location_line]: 84,
+        [_Location_file]: null
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 19,
+        [_Location_line]: 91,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 19,
+        [_Location_line]: 92,
+        [_Location_file]: null
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "shape",
+        [_Location_column]: 19,
+        [_Location_line]: 93,
+        [_Location_file]: null
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.constList([C[58] || CT.C58, C[59] || CT.C59, C[60] || CT.C60, C[61] || CT.C61, C[62] || CT.C62, C[63] || CT.C63, C[64] || CT.C64], T._LocationL());
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[57] || CT.C57,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 81,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 17,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 17,
+        [_Location_line]: 72,
+        [_Location_file]: null
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 81,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C[66] = dart.constList([C[67] || CT.C67, C[68] || CT.C68, C[69] || CT.C69], T._LocationL());
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[66] || CT.C66,
+        [_Location_name]: null,
+        [_Location_column]: 34,
+        [_Location_line]: 70,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 29,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 34,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C[71] = dart.constList([C[72] || CT.C72, C[73] || CT.C73], T._LocationL());
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[71] || CT.C71,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 70,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 24,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C75() {
+      return C[75] = dart.constList([C[76] || CT.C76], T._LocationL());
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[75] || CT.C75,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 105,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 27,
+        [_Location_line]: 106,
+        [_Location_file]: null
+      });
+    },
+    get C78() {
+      return C[78] = dart.constList([C[79] || CT.C79], T._LocationL());
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[78] || CT.C78,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 106,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 21,
+        [_Location_line]: 109,
+        [_Location_file]: null
+      });
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 21,
+        [_Location_line]: 110,
+        [_Location_file]: null
+      });
+    },
+    get C81() {
+      return C[81] = dart.constList([C[82] || CT.C82, C[83] || CT.C83], T._LocationL());
+    },
+    get C80() {
+      return C[80] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[81] || CT.C81,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 108,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C85() {
+      return C[85] = dart.constList([], T._LocationL());
+    },
+    get C84() {
+      return C[84] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[85] || CT.C85,
+        [_Location_name]: null,
+        [_Location_column]: 49,
+        [_Location_line]: 115,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 21,
+        [_Location_line]: 108,
+        [_Location_file]: null
+      });
+    },
+    get C89() {
+      return C[89] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 21,
+        [_Location_line]: 113,
+        [_Location_file]: null
+      });
+    },
+    get C87() {
+      return C[87] = dart.constList([C[88] || CT.C88, C[89] || CT.C89], T._LocationL());
+    },
+    get C86() {
+      return C[86] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[87] || CT.C87,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 107,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 17,
+        [_Location_line]: 103,
+        [_Location_file]: null
+      });
+    },
+    get C93() {
+      return C[93] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 104,
+        [_Location_file]: null
+      });
+    },
+    get C91() {
+      return C[91] = dart.constList([C[92] || CT.C92, C[93] || CT.C93], T._LocationL());
+    },
+    get C90() {
+      return C[90] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[91] || CT.C91,
+        [_Location_name]: null,
+        [_Location_column]: 34,
+        [_Location_line]: 102,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C96() {
+      return C[96] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 29,
+        [_Location_line]: 102,
+        [_Location_file]: null
+      });
+    },
+    get C97() {
+      return C[97] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 34,
+        [_Location_line]: 102,
+        [_Location_file]: null
+      });
+    },
+    get C95() {
+      return C[95] = dart.constList([C[96] || CT.C96, C[97] || CT.C97], T._LocationL());
+    },
+    get C94() {
+      return C[94] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[95] || CT.C95,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 102,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C100() {
+      return C[100] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C101() {
+      return C[101] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C99() {
+      return C[99] = dart.constList([C[100] || CT.C100, C[101] || CT.C101], T._LocationL());
+    },
+    get C98() {
+      return C[98] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[99] || CT.C99,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 36,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C104() {
+      return C[104] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 11,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C105() {
+      return C[105] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 11,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C106() {
+      return C[106] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 11,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C107() {
+      return C[107] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C103() {
+      return C[103] = dart.constList([C[104] || CT.C104, C[105] || CT.C105, C[106] || CT.C106, C[107] || CT.C107], T._LocationL());
+    },
+    get C102() {
+      return C[102] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[103] || CT.C103,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C110() {
+      return C[110] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C109() {
+      return C[109] = dart.constList([C[110] || CT.C110], T._LocationL());
+    },
+    get C108() {
+      return C[108] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[109] || CT.C109,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C113() {
+      return C[113] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "resizeToAvoidBottomInset",
+        [_Location_column]: 7,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C114() {
+      return C[114] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 7,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C115() {
+      return C[115] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 7,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C116() {
+      return C[116] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C112() {
+      return C[112] = dart.constList([C[113] || CT.C113, C[114] || CT.C114, C[115] || CT.C115, C[116] || CT.C116], T._LocationL());
+    },
+    get C111() {
+      return C[111] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[112] || CT.C112,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 17,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C119() {
+      return C[119] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 14,
+        [_Location_line]: 132,
+        [_Location_file]: null
+      });
+    },
+    get C120() {
+      return C[120] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 21,
+        [_Location_line]: 132,
+        [_Location_file]: null
+      });
+    },
+    get C118() {
+      return C[118] = dart.constList([C[119] || CT.C119, C[120] || CT.C120], T._LocationL());
+    },
+    get C117() {
+      return C[117] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[118] || CT.C118,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 132,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C123() {
+      return C[123] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 18,
+        [_Location_line]: 137,
+        [_Location_file]: null
+      });
+    },
+    get C122() {
+      return C[122] = dart.constList([C[123] || CT.C123], T._LocationL());
+    },
+    get C121() {
+      return C[121] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[122] || CT.C122,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 137,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C126() {
+      return C[126] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 11,
+        [_Location_line]: 139,
+        [_Location_file]: null
+      });
+    },
+    get C127() {
+      return C[127] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "obscureText",
+        [_Location_column]: 11,
+        [_Location_line]: 140,
+        [_Location_file]: null
+      });
+    },
+    get C128() {
+      return C[128] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 11,
+        [_Location_line]: 141,
+        [_Location_file]: null
+      });
+    },
+    get C125() {
+      return C[125] = dart.constList([C[126] || CT.C126, C[127] || CT.C127, C[128] || CT.C128], T._LocationL());
+    },
+    get C124() {
+      return C[124] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[125] || CT.C125,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 138,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C131() {
+      return C[131] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 18,
+        [_Location_line]: 151,
+        [_Location_file]: null
+      });
+    },
+    get C130() {
+      return C[130] = dart.constList([C[131] || CT.C131], T._LocationL());
+    },
+    get C129() {
+      return C[129] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[130] || CT.C130,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 151,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C134() {
+      return C[134] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 7,
+        [_Location_line]: 130,
+        [_Location_file]: null
+      });
+    },
+    get C135() {
+      return C[135] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 7,
+        [_Location_line]: 131,
+        [_Location_file]: null
+      });
+    },
+    get C133() {
+      return C[133] = dart.constList([C[134] || CT.C134, C[135] || CT.C135], T._LocationL());
+    },
+    get C132() {
+      return C[132] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[133] || CT.C133,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 129,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/signup.dart"
+      });
+    },
+    get C138() {
+      return C[138] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 19,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C139() {
+      return C[139] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 13,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C140() {
+      return C[140] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 13,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C137() {
+      return C[137] = dart.constList([C[138] || CT.C138, C[139] || CT.C139, C[140] || CT.C140], T._LocationL());
+    },
+    get C136() {
+      return C[136] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[137] || CT.C137,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C143() {
+      return C[143] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 11,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C144() {
+      return C[144] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 11,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C142() {
+      return C[142] = dart.constList([C[143] || CT.C143, C[144] || CT.C144], T._LocationL());
+    },
+    get C141() {
+      return C[141] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[142] || CT.C142,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 22,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C147() {
+      return C[147] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 9,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C148() {
+      return C[148] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "brightness",
+        [_Location_column]: 9,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C149() {
+      return C[149] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 9,
+        [_Location_line]: 21,
+        [_Location_file]: null
+      });
+    },
+    get C150() {
+      return C[150] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "leading",
+        [_Location_column]: 9,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C146() {
+      return C[146] = dart.constList([C[147] || CT.C147, C[148] || CT.C148, C[149] || CT.C149, C[150] || CT.C150], T._LocationL());
+    },
+    get C145() {
+      return C[145] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[146] || CT.C146,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 18,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C153() {
+      return C[153] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 29,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C154() {
+      return C[154] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 29,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C152() {
+      return C[152] = dart.constList([C[153] || CT.C153, C[154] || CT.C154], T._LocationL());
+    },
+    get C151() {
+      return C[151] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[152] || CT.C152,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C157() {
+      return C[157] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 27,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C158() {
+      return C[158] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 27,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C156() {
+      return C[156] = dart.constList([C[157] || CT.C157, C[158] || CT.C158], T._LocationL());
+    },
+    get C155() {
+      return C[155] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[156] || CT.C156,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C161() {
+      return C[161] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 25,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C160() {
+      return C[160] = dart.constList([C[161] || CT.C161], T._LocationL());
+    },
+    get C159() {
+      return C[159] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[160] || CT.C160,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C164() {
+      return C[164] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 29,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C165() {
+      return C[165] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 29,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C163() {
+      return C[163] = dart.constList([C[164] || CT.C164, C[165] || CT.C165], T._LocationL());
+    },
+    get C162() {
+      return C[162] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[163] || CT.C163,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C168() {
+      return C[168] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 27,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C169() {
+      return C[169] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 27,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C167() {
+      return C[167] = dart.constList([C[168] || CT.C168, C[169] || CT.C169], T._LocationL());
+    },
+    get C166() {
+      return C[166] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[167] || CT.C167,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C172() {
+      return C[172] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 21,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C171() {
+      return C[171] = dart.constList([C[172] || CT.C172], T._LocationL());
+    },
+    get C170() {
+      return C[170] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[171] || CT.C171,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C175() {
+      return C[175] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 29,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C176() {
+      return C[176] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 29,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C174() {
+      return C[174] = dart.constList([C[175] || CT.C175, C[176] || CT.C176], T._LocationL());
+    },
+    get C173() {
+      return C[173] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[174] || CT.C174,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 68,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C179() {
+      return C[179] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 29,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C180() {
+      return C[180] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 29,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C178() {
+      return C[178] = dart.constList([C[179] || CT.C179, C[180] || CT.C180], T._LocationL());
+    },
+    get C177() {
+      return C[177] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[178] || CT.C178,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 72,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C183() {
+      return C[183] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 23,
+        [_Location_line]: 67,
+        [_Location_file]: null
+      });
+    },
+    get C182() {
+      return C[182] = dart.constList([C[183] || CT.C183], T._LocationL());
+    },
+    get C181() {
+      return C[181] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[182] || CT.C182,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 66,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C186() {
+      return C[186] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 21,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C187() {
+      return C[187] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 21,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C185() {
+      return C[185] = dart.constList([C[186] || CT.C186, C[187] || CT.C187], T._LocationL());
+    },
+    get C184() {
+      return C[184] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[185] || CT.C185,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 64,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C190() {
+      return C[190] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 31,
+        [_Location_line]: 110,
+        [_Location_file]: null
+      });
+    },
+    get C191() {
+      return C[191] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 31,
+        [_Location_line]: 111,
+        [_Location_file]: null
+      });
+    },
+    get C189() {
+      return C[189] = dart.constList([C[190] || CT.C190, C[191] || CT.C191], T._LocationL());
+    },
+    get C188() {
+      return C[188] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[189] || CT.C189,
+        [_Location_name]: null,
+        [_Location_column]: 36,
+        [_Location_line]: 109,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C194() {
+      return C[194] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "minWidth",
+        [_Location_column]: 29,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C195() {
+      return C[195] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 29,
+        [_Location_line]: 97,
+        [_Location_file]: null
+      });
+    },
+    get C196() {
+      return C[196] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 29,
+        [_Location_line]: 98,
+        [_Location_file]: null
+      });
+    },
+    get C197() {
+      return C[197] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 29,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C198() {
+      return C[198] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 29,
+        [_Location_line]: 106,
+        [_Location_file]: null
+      });
+    },
+    get C199() {
+      return C[199] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "shape",
+        [_Location_column]: 29,
+        [_Location_line]: 107,
+        [_Location_file]: null
+      });
+    },
+    get C200() {
+      return C[200] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 29,
+        [_Location_line]: 109,
+        [_Location_file]: null
+      });
+    },
+    get C193() {
+      return C[193] = dart.constList([C[194] || CT.C194, C[195] || CT.C195, C[196] || CT.C196, C[197] || CT.C197, C[198] || CT.C198, C[199] || CT.C199, C[200] || CT.C200], T._LocationL());
+    },
+    get C192() {
+      return C[192] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[193] || CT.C193,
+        [_Location_name]: null,
+        [_Location_column]: 34,
+        [_Location_line]: 95,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C203() {
+      return C[203] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 27,
+        [_Location_line]: 86,
+        [_Location_file]: null
+      });
+    },
+    get C204() {
+      return C[204] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 27,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C205() {
+      return C[205] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 27,
+        [_Location_line]: 95,
+        [_Location_file]: null
+      });
+    },
+    get C202() {
+      return C[202] = dart.constList([C[203] || CT.C203, C[204] || CT.C204, C[205] || CT.C205], T._LocationL());
+    },
+    get C201() {
+      return C[201] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[202] || CT.C202,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 85,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C208() {
+      return C[208] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 25,
+        [_Location_line]: 84,
+        [_Location_file]: null
+      });
+    },
+    get C209() {
+      return C[209] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 25,
+        [_Location_line]: 85,
+        [_Location_file]: null
+      });
+    },
+    get C207() {
+      return C[207] = dart.constList([C[208] || CT.C208, C[209] || CT.C209], T._LocationL());
+    },
+    get C206() {
+      return C[206] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[207] || CT.C207,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 83,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C212() {
+      return C[212] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 23,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C213() {
+      return C[213] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 23,
+        [_Location_line]: 83,
+        [_Location_file]: null
+      });
+    },
+    get C211() {
+      return C[211] = dart.constList([C[212] || CT.C212, C[213] || CT.C213], T._LocationL());
+    },
+    get C210() {
+      return C[210] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[211] || CT.C211,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 81,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C216() {
+      return C[216] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 32,
+        [_Location_line]: 122,
+        [_Location_file]: null
+      });
+    },
+    get C215() {
+      return C[215] = dart.constList([C[216] || CT.C216], T._LocationL());
+    },
+    get C214() {
+      return C[214] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[215] || CT.C215,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 122,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C219() {
+      return C[219] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 35,
+        [_Location_line]: 123,
+        [_Location_file]: null
+      });
+    },
+    get C218() {
+      return C[218] = dart.constList([C[219] || CT.C219], T._LocationL());
+    },
+    get C217() {
+      return C[217] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[218] || CT.C218,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 123,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C222() {
+      return C[222] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 29,
+        [_Location_line]: 126,
+        [_Location_file]: null
+      });
+    },
+    get C223() {
+      return C[223] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 29,
+        [_Location_line]: 127,
+        [_Location_file]: null
+      });
+    },
+    get C221() {
+      return C[221] = dart.constList([C[222] || CT.C222, C[223] || CT.C223], T._LocationL());
+    },
+    get C220() {
+      return C[220] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[221] || CT.C221,
+        [_Location_name]: null,
+        [_Location_column]: 36,
+        [_Location_line]: 125,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C224() {
+      return C[224] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[85] || CT.C85,
+        [_Location_name]: null,
+        [_Location_column]: 57,
+        [_Location_line]: 132,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C227() {
+      return C[227] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 29,
+        [_Location_line]: 125,
+        [_Location_file]: null
+      });
+    },
+    get C228() {
+      return C[228] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 29,
+        [_Location_line]: 130,
+        [_Location_file]: null
+      });
+    },
+    get C226() {
+      return C[226] = dart.constList([C[227] || CT.C227, C[228] || CT.C228], T._LocationL());
+    },
+    get C225() {
+      return C[225] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[226] || CT.C226,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 124,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C231() {
+      return C[231] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 25,
+        [_Location_line]: 120,
+        [_Location_file]: null
+      });
+    },
+    get C232() {
+      return C[232] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 25,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C230() {
+      return C[230] = dart.constList([C[231] || CT.C231, C[232] || CT.C232], T._LocationL());
+    },
+    get C229() {
+      return C[229] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[230] || CT.C230,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 119,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C235() {
+      return C[235] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 23,
+        [_Location_line]: 118,
+        [_Location_file]: null
+      });
+    },
+    get C236() {
+      return C[236] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 23,
+        [_Location_line]: 119,
+        [_Location_file]: null
+      });
+    },
+    get C234() {
+      return C[234] = dart.constList([C[235] || CT.C235, C[236] || CT.C236], T._LocationL());
+    },
+    get C233() {
+      return C[233] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[234] || CT.C234,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 117,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C239() {
+      return C[239] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 17,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C240() {
+      return C[240] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C238() {
+      return C[238] = dart.constList([C[239] || CT.C239, C[240] || CT.C240], T._LocationL());
+    },
+    get C237() {
+      return C[237] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[238] || CT.C238,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C243() {
+      return C[243] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C242() {
+      return C[242] = dart.constList([C[243] || CT.C243], T._LocationL());
+    },
+    get C241() {
+      return C[241] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[242] || CT.C242,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 39,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C246() {
+      return C[246] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 19,
+        [_Location_line]: 145,
+        [_Location_file]: null
+      });
+    },
+    get C247() {
+      return C[247] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 19,
+        [_Location_line]: 146,
+        [_Location_file]: null
+      });
+    },
+    get C245() {
+      return C[245] = dart.constList([C[246] || CT.C246, C[247] || CT.C247], T._LocationL());
+    },
+    get C244() {
+      return C[244] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[245] || CT.C245,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 144,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C250() {
+      return C[250] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 17,
+        [_Location_line]: 143,
+        [_Location_file]: null
+      });
+    },
+    get C251() {
+      return C[251] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 144,
+        [_Location_file]: null
+      });
+    },
+    get C249() {
+      return C[249] = dart.constList([C[250] || CT.C250, C[251] || CT.C251], T._LocationL());
+    },
+    get C248() {
+      return C[248] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[249] || CT.C249,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 142,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C254() {
+      return C[254] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 11,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C255() {
+      return C[255] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C253() {
+      return C[253] = dart.constList([C[254] || CT.C254, C[255] || CT.C255], T._LocationL());
+    },
+    get C252() {
+      return C[252] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[253] || CT.C253,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 36,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C258() {
+      return C[258] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C259() {
+      return C[259] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 9,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C260() {
+      return C[260] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C257() {
+      return C[257] = dart.constList([C[258] || CT.C258, C[259] || CT.C259, C[260] || CT.C260], T._LocationL());
+    },
+    get C256() {
+      return C[256] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[257] || CT.C257,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C263() {
+      return C[263] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "resizeToAvoidBottomInset",
+        [_Location_column]: 7,
+        [_Location_line]: 16,
+        [_Location_file]: null
+      });
+    },
+    get C264() {
+      return C[264] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 7,
+        [_Location_line]: 17,
+        [_Location_file]: null
+      });
+    },
+    get C265() {
+      return C[265] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 7,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C266() {
+      return C[266] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C262() {
+      return C[262] = dart.constList([C[263] || CT.C263, C[264] || CT.C264, C[265] || CT.C265, C[266] || CT.C266], T._LocationL());
+    },
+    get C261() {
+      return C[261] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[262] || CT.C262,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 15,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C269() {
+      return C[269] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 11,
+        [_Location_line]: 162,
+        [_Location_file]: null
+      });
+    },
+    get C270() {
+      return C[270] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 11,
+        [_Location_line]: 163,
+        [_Location_file]: null
+      });
+    },
+    get C268() {
+      return C[268] = dart.constList([C[269] || CT.C269, C[270] || CT.C270], T._LocationL());
+    },
+    get C267() {
+      return C[267] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[268] || CT.C268,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 161,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C273() {
+      return C[273] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 11,
+        [_Location_line]: 167,
+        [_Location_file]: null
+      });
+    },
+    get C272() {
+      return C[272] = dart.constList([C[273] || CT.C273], T._LocationL());
+    },
+    get C271() {
+      return C[271] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[272] || CT.C272,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 166,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C276() {
+      return C[276] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 11,
+        [_Location_line]: 170,
+        [_Location_file]: null
+      });
+    },
+    get C277() {
+      return C[277] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "obscureText",
+        [_Location_column]: 11,
+        [_Location_line]: 171,
+        [_Location_file]: null
+      });
+    },
+    get C278() {
+      return C[278] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 11,
+        [_Location_line]: 172,
+        [_Location_file]: null
+      });
+    },
+    get C275() {
+      return C[275] = dart.constList([C[276] || CT.C276, C[277] || CT.C277, C[278] || CT.C278], T._LocationL());
+    },
+    get C274() {
+      return C[274] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[275] || CT.C275,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 169,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C281() {
+      return C[281] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 11,
+        [_Location_line]: 181,
+        [_Location_file]: null
+      });
+    },
+    get C280() {
+      return C[280] = dart.constList([C[281] || CT.C281], T._LocationL());
+    },
+    get C279() {
+      return C[279] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[280] || CT.C280,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 180,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    },
+    get C284() {
+      return C[284] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 7,
+        [_Location_line]: 159,
+        [_Location_file]: null
+      });
+    },
+    get C285() {
+      return C[285] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 7,
+        [_Location_line]: 160,
+        [_Location_file]: null
+      });
+    },
+    get C283() {
+      return C[283] = dart.constList([C[284] || CT.C284, C[285] || CT.C285], T._LocationL());
+    },
+    get C282() {
+      return C[282] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[283] || CT.C283,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 158,
+        [_Location_file]: "file:///C:/Users/DELL/Desktop/Flutter/book_geeks/lib/pages/Welcome/login.dart"
+      });
+    }
+  }, false);
+  var C = Array(286).fill(void 0);
+  var I = [
+    "package:book_geeks/pages/Welcome/signup.dart",
+    "package:book_geeks/pages/Welcome/login.dart"
+  ];
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  signup.SignupPage = class SignupPage extends framework.StatelessWidget {
+    build(context) {
+      let emailController = new editable_text.TextEditingController.new();
+      let passwordController = new editable_text.TextEditingController.new();
+      let authService = provider.Provider.of(T.AuthServiceL(), context);
+      return new scaffold.Scaffold.new({resizeToAvoidBottomInset: true, backgroundColor: colors.Colors.white, appBar: new app_bar.AppBar.new({elevation: 0.0, brightness: ui.Brightness.light, backgroundColor: colors.Colors.white, leading: new icon_button.IconButton.new({onPressed: dart.fn(() => {
+              navigator.Navigator.pop(T.ObjectL(), context);
+            }, T.VoidToNull()), icon: new icon.Icon.new(icons.Icons.arrow_back_ios, {size: 20.0, color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), $creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), body: new single_child_scroll_view.SingleChildScrollView.new({child: new container.Container.new({padding: new edge_insets.EdgeInsets.symmetric({horizontal: 40.0}), height: dart.notNull(media_query.MediaQuery.of(context).size.height) - 50, width: 1 / 0, child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.spaceEvenly, children: T.JSArrayOfWidgetL().of([new basic.Column.new({children: T.JSArrayOfWidgetL().of([new FadeAnimation.FadeAnimation.new(1.0, new text.Text.new("Sign up", {style: new text_style.TextStyle.new({fontSize: 30.0, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15}), {$creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), new basic.SizedBox.new({height: 20.0, $creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), new FadeAnimation.FadeAnimation.new(1.2, new text.Text.new("Create an account, It's free", {style: new text_style.TextStyle.new({fontSize: 15.0, color: colors.Colors.grey._get(700)}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), {$creationLocationd_0dea112b090073317d4: C[30] || CT.C30})]), $creationLocationd_0dea112b090073317d4: C[34] || CT.C34}), new basic.Column.new({children: T.JSArrayOfWidgetL().of([new FadeAnimation.FadeAnimation.new(1.2, this.makeInput({label: "Email", control: emailController}), {$creationLocationd_0dea112b090073317d4: C[37] || CT.C37}), new FadeAnimation.FadeAnimation.new(1.3, this.makeInput({label: "Password", obscureText: true, control: passwordController}), {$creationLocationd_0dea112b090073317d4: C[41] || CT.C41}), new FadeAnimation.FadeAnimation.new(1.4, this.makeInput({label: "Confirm Password", obscureText: true, control: passwordController}), {$creationLocationd_0dea112b090073317d4: C[45] || CT.C45})]), $creationLocationd_0dea112b090073317d4: C[49] || CT.C49}), new FadeAnimation.FadeAnimation.new(1.5, new container.Container.new({padding: new edge_insets.EdgeInsets.only({top: 3.0, left: 3.0}), decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(50.0), border: new box_border.Border.new({bottom: new borders.BorderSide.new({color: colors.Colors.black}), top: new borders.BorderSide.new({color: colors.Colors.black}), left: new borders.BorderSide.new({color: colors.Colors.black}), right: new borders.BorderSide.new({color: colors.Colors.black})})}), child: new material_button.MaterialButton.new({minWidth: 1 / 0, height: 60.0, onPressed: dart.fn(() => async.async(core.Null, function*() {
+                      yield authService.signInWithEmailAndPassword(emailController.text, passwordController.text);
+                      navigator.Navigator.pushNamed(T.ObjectL(), context, "/home");
+                    }), T.VoidToFutureLOfNull()), color: colors.Colors.greenAccent, elevation: 0.0, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(50.0)}), child: new text.Text.new("Sign up", {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.w600, fontSize: 18.0}), $creationLocationd_0dea112b090073317d4: C[52] || CT.C52}), $creationLocationd_0dea112b090073317d4: C[56] || CT.C56}), $creationLocationd_0dea112b090073317d4: C[65] || CT.C65}), {$creationLocationd_0dea112b090073317d4: C[70] || CT.C70}), new FadeAnimation.FadeAnimation.new(1.6, new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new text.Text.new("Already have an account with us?", {$creationLocationd_0dea112b090073317d4: C[74] || CT.C74}), new basic.Padding.new({padding: new edge_insets.EdgeInsets.all(10.0), $creationLocationd_0dea112b090073317d4: C[77] || CT.C77}), new gesture_detector.GestureDetector.new({child: new text.Text.new("Login", {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.w600, fontSize: 18.0}), $creationLocationd_0dea112b090073317d4: C[80] || CT.C80}), onTap: dart.fn(() => {
+                        navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => new login.LoginPage.new({$creationLocationd_0dea112b090073317d4: C[84] || CT.C84}), T.BuildContextLToLoginPageL())}));
+                      }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[86] || CT.C86})]), $creationLocationd_0dea112b090073317d4: C[90] || CT.C90}), {$creationLocationd_0dea112b090073317d4: C[94] || CT.C94})]), $creationLocationd_0dea112b090073317d4: C[98] || CT.C98}), $creationLocationd_0dea112b090073317d4: C[102] || CT.C102}), $creationLocationd_0dea112b090073317d4: C[108] || CT.C108}), $creationLocationd_0dea112b090073317d4: C[111] || CT.C111});
+    }
+    makeInput(opts) {
+      let label = opts && 'label' in opts ? opts.label : null;
+      let obscureText = opts && 'obscureText' in opts ? opts.obscureText : false;
+      let control = opts && 'control' in opts ? opts.control : null;
+      return new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidgetL().of([new text.Text.new(core.String.as(label), {style: new text_style.TextStyle.new({fontSize: 15.0, fontWeight: ui.FontWeight.w400, color: colors.Colors.black87}), $creationLocationd_0dea112b090073317d4: C[117] || CT.C117}), new basic.SizedBox.new({height: 5.0, $creationLocationd_0dea112b090073317d4: C[121] || CT.C121}), new text_field.TextField.new({controller: T.TextEditingControllerN().as(control), obscureText: core.bool.as(obscureText), decoration: new input_decorator.InputDecoration.new({contentPadding: new edge_insets.EdgeInsets.symmetric({vertical: 0.0, horizontal: 10.0}), enabledBorder: new input_border.OutlineInputBorder.new({borderSide: new borders.BorderSide.new({color: colors.Colors.grey._get(400)})}), border: new input_border.OutlineInputBorder.new({borderSide: new borders.BorderSide.new({color: colors.Colors.grey._get(400)})})}), $creationLocationd_0dea112b090073317d4: C[124] || CT.C124}), new basic.SizedBox.new({height: 30.0, $creationLocationd_0dea112b090073317d4: C[129] || CT.C129})]), $creationLocationd_0dea112b090073317d4: C[132] || CT.C132});
+    }
+  };
+  (signup.SignupPage.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    signup.SignupPage.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = signup.SignupPage.prototype;
+  dart.addTypeTests(signup.SignupPage);
+  dart.addTypeCaches(signup.SignupPage);
+  dart.setMethodSignature(signup.SignupPage, () => ({
+    __proto__: dart.getMethods(signup.SignupPage.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    makeInput: dart.fnType(dart.legacy(framework.Widget), [], {control: dart.dynamic, label: dart.dynamic, obscureText: dart.dynamic}, {})
+  }));
+  dart.setLibraryUri(signup.SignupPage, I[0]);
+  login.LoginPage = class LoginPage extends framework.StatelessWidget {
+    build(context) {
+      let emailController = new editable_text.TextEditingController.new();
+      let passwordController = new editable_text.TextEditingController.new();
+      let authService = provider.Provider.of(T.AuthServiceL(), context);
+      return new scaffold.Scaffold.new({resizeToAvoidBottomInset: false, backgroundColor: colors.Colors.white, appBar: new app_bar.AppBar.new({elevation: 0.0, brightness: ui.Brightness.light, backgroundColor: colors.Colors.white, leading: new icon_button.IconButton.new({onPressed: dart.fn(() => {
+              navigator.Navigator.pop(T.ObjectL(), context);
+            }, T.VoidToNull()), icon: new icon.Icon.new(icons.Icons.arrow_back_ios, {size: 20.0, color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[136] || CT.C136}), $creationLocationd_0dea112b090073317d4: C[141] || CT.C141}), $creationLocationd_0dea112b090073317d4: C[145] || CT.C145}), body: new container.Container.new({height: media_query.MediaQuery.of(context).size.height, width: 1 / 0, child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: T.JSArrayOfWidgetL().of([new basic.Expanded.new({child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.spaceEvenly, children: T.JSArrayOfWidgetL().of([new basic.Column.new({children: T.JSArrayOfWidgetL().of([new FadeAnimation.FadeAnimation.new(1.0, new text.Text.new("Login", {style: new text_style.TextStyle.new({fontSize: 30.0, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[151] || CT.C151}), {$creationLocationd_0dea112b090073317d4: C[155] || CT.C155}), new basic.SizedBox.new({height: 20.0, $creationLocationd_0dea112b090073317d4: C[159] || CT.C159}), new FadeAnimation.FadeAnimation.new(1.2, new text.Text.new("Login to your account", {style: new text_style.TextStyle.new({fontSize: 15.0, color: colors.Colors.grey._get(700)}), $creationLocationd_0dea112b090073317d4: C[162] || CT.C162}), {$creationLocationd_0dea112b090073317d4: C[166] || CT.C166})]), $creationLocationd_0dea112b090073317d4: C[170] || CT.C170}), new basic.Padding.new({padding: new edge_insets.EdgeInsets.symmetric({horizontal: 40.0}), child: new basic.Column.new({children: T.JSArrayOfWidgetL().of([new FadeAnimation.FadeAnimation.new(1.2, this.makeInput({label: "Email", control: emailController}), {$creationLocationd_0dea112b090073317d4: C[173] || CT.C173}), new FadeAnimation.FadeAnimation.new(1.3, this.makeInput({label: "Password", obscureText: true, control: passwordController}), {$creationLocationd_0dea112b090073317d4: C[177] || CT.C177})]), $creationLocationd_0dea112b090073317d4: C[181] || CT.C181}), $creationLocationd_0dea112b090073317d4: C[184] || CT.C184}), new FadeAnimation.FadeAnimation.new(1.4, new basic.Padding.new({padding: new edge_insets.EdgeInsets.symmetric({horizontal: 40.0}), child: new container.Container.new({padding: new edge_insets.EdgeInsets.only({top: 3.0, left: 3.0}), decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.circular(50.0), border: new box_border.Border.new({bottom: new borders.BorderSide.new({color: colors.Colors.black}), top: new borders.BorderSide.new({color: colors.Colors.black}), left: new borders.BorderSide.new({color: colors.Colors.black}), right: new borders.BorderSide.new({color: colors.Colors.black})})}), child: new material_button.MaterialButton.new({minWidth: 1 / 0, height: 60.0, onPressed: dart.fn(() => {
+                            authService.signInWithEmailAndPassword(emailController.text, passwordController.text);
+                            navigator.Navigator.pushNamed(T.ObjectL(), context, "/home");
+                          }, T.VoidToNull()), color: colors.Colors.greenAccent, elevation: 0.0, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(50.0)}), child: new text.Text.new("Login", {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.w600, fontSize: 18.0}), $creationLocationd_0dea112b090073317d4: C[188] || CT.C188}), $creationLocationd_0dea112b090073317d4: C[192] || CT.C192}), $creationLocationd_0dea112b090073317d4: C[201] || CT.C201}), $creationLocationd_0dea112b090073317d4: C[206] || CT.C206}), {$creationLocationd_0dea112b090073317d4: C[210] || CT.C210}), new FadeAnimation.FadeAnimation.new(1.5, new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new text.Text.new("Don't have an account at Book Geeks?", {$creationLocationd_0dea112b090073317d4: C[214] || CT.C214}), new basic.Padding.new({padding: new edge_insets.EdgeInsets.all(10.0), $creationLocationd_0dea112b090073317d4: C[217] || CT.C217}), new gesture_detector.GestureDetector.new({child: new text.Text.new("Sign up", {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.w600, fontSize: 18.0}), $creationLocationd_0dea112b090073317d4: C[220] || CT.C220}), onTap: dart.fn(() => {
+                            navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => new signup.SignupPage.new({$creationLocationd_0dea112b090073317d4: C[224] || CT.C224}), T.BuildContextLToSignupPageL())}));
+                          }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[225] || CT.C225})]), $creationLocationd_0dea112b090073317d4: C[229] || CT.C229}), {$creationLocationd_0dea112b090073317d4: C[233] || CT.C233})]), $creationLocationd_0dea112b090073317d4: C[237] || CT.C237}), $creationLocationd_0dea112b090073317d4: C[241] || CT.C241}), new FadeAnimation.FadeAnimation.new(1.2, new container.Container.new({height: dart.notNull(media_query.MediaQuery.of(context).size.height) / 3, decoration: new box_decoration.BoxDecoration.new({image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new("./assets/images/background.png"), fit: box_fit.BoxFit.cover})}), $creationLocationd_0dea112b090073317d4: C[244] || CT.C244}), {$creationLocationd_0dea112b090073317d4: C[248] || CT.C248})]), $creationLocationd_0dea112b090073317d4: C[252] || CT.C252}), $creationLocationd_0dea112b090073317d4: C[256] || CT.C256}), $creationLocationd_0dea112b090073317d4: C[261] || CT.C261});
+    }
+    makeInput(opts) {
+      let label = opts && 'label' in opts ? opts.label : null;
+      let obscureText = opts && 'obscureText' in opts ? opts.obscureText : false;
+      let control = opts && 'control' in opts ? opts.control : null;
+      return new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidgetL().of([new text.Text.new(core.String.as(label), {style: new text_style.TextStyle.new({fontSize: 15.0, fontWeight: ui.FontWeight.w400, color: colors.Colors.black87}), $creationLocationd_0dea112b090073317d4: C[267] || CT.C267}), new basic.SizedBox.new({height: 5.0, $creationLocationd_0dea112b090073317d4: C[271] || CT.C271}), new text_field.TextField.new({controller: T.TextEditingControllerN().as(control), obscureText: core.bool.as(obscureText), decoration: new input_decorator.InputDecoration.new({contentPadding: new edge_insets.EdgeInsets.symmetric({vertical: 0.0, horizontal: 10.0}), enabledBorder: new input_border.OutlineInputBorder.new({borderSide: new borders.BorderSide.new({color: colors.Colors.grey._get(400)})}), border: new input_border.OutlineInputBorder.new({borderSide: new borders.BorderSide.new({color: colors.Colors.grey._get(400)})})}), $creationLocationd_0dea112b090073317d4: C[274] || CT.C274}), new basic.SizedBox.new({height: 30.0, $creationLocationd_0dea112b090073317d4: C[279] || CT.C279})]), $creationLocationd_0dea112b090073317d4: C[282] || CT.C282});
+    }
+  };
+  (login.LoginPage.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    login.LoginPage.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = login.LoginPage.prototype;
+  dart.addTypeTests(login.LoginPage);
+  dart.addTypeCaches(login.LoginPage);
+  dart.setMethodSignature(login.LoginPage, () => ({
+    __proto__: dart.getMethods(login.LoginPage.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    makeInput: dart.fnType(dart.legacy(framework.Widget), [], {control: dart.dynamic, label: dart.dynamic, obscureText: dart.dynamic}, {})
+  }));
+  dart.setLibraryUri(login.LoginPage, I[1]);
+  dart.trackLibraries("packages/book_geeks/pages/Welcome/signup.dart", {
+    "package:book_geeks/pages/Welcome/signup.dart": signup,
+    "package:book_geeks/pages/Welcome/login.dart": login
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["signup.dart","login.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAU4B;AACI,4BAAkB;AAClB,+BAAqB;AAE3C,wBAAuB,uCAAgB,OAAO;AAEpD,YAAO,sDACqB,uBACF,6BAChB,mCACK,iBACY,sCACC,8BACf,2CACI;AACa,cAAZ,qCAAI,OAAO;sCAEjB,kBAAW,mCAAsB,aAAkB,sMAGvD,+DACG,sCACe,kDAAsB,gBACC,aAAxB,AAAY,AAAK,0BAAd,OAAO,iBAAgB,yBAEtC,yCACgC,8CACnB,yBAChB,gCACoB,yBAChB,oCAAc,KAAG,kBAAK,mBAAkB,wCAC5B,kBACa,6IAEzB,gCAAiB,iEACjB,oCAAc,KAAK,kBAAK,wCAAuC,wCACnD,aACI,AAAI,wBAAC,4LAIzB,gCACoB,yBAChB,oCAAc,KAAK,uBACV,kBACE,eAAe,gEAE1B,oCAAc,KAAK,uBACV,yBACM,eACJ,kBAAkB,gEAE7B,oCAAc,KAAK,uBACV,iCACM,eACJ,kBAAkB,6HAIjC,oCAAc,KAAK,sCACG,sCAAU,WAAS,mBAC3B,oDACiB,wCAAS,eAC5B,mCACE,mCAAyB,4BAC5B,mCAAyB,6BACxB,mCAAyB,8BACxB,mCAAyB,kCAG7B,iEAEG,iBACG;AAIR,sBAHD,MAAM,AAAY,WAAD,4BACf,AAAgB,eAAD,OACf,AAAmB,kBAAD;AAEiB,sBAA3B,2CAAU,OAAO,EAAE;oBAC9B,qCACa,sCACH,YACJ,uEACsB,wCAAS,gBAE/B,kBAAK,mBAAkB,0CACL,8BACb,qPAIhB,oCAAc,KAAK,sCACoB,yCACnB,yBAChB,kBAAK,gGACL,gCAA4B,+BAAI,kEAChC,iDACS,kBACP,iBACO,0CACoB,8BAAgB,0EAEpC;AAGJ,wBAFS,uCAAK,OAAO,EAAE,yCACX,QAAC,WAAY;;IAW9C;;UAEkB;UAAO;UAAqB;AAC5C,YAAO,2CACkC,yCACrB,yBAChB,iCAAK,KAAK,WAAS,wCACP,kBACa,2BACT,sFAEhB,gCAAiB,kEACjB,wEACc,OAAO,6BACN,WAAW,eACZ,yDACiB,gDAAoB,iBAAe,uBAC/C,qDACD,mCAAyB,AAAI,wBAAC,kBAEpC,qDACM,mCAAyB,AAAI,wBAAC,yEAIhD,gCAAiB;IAGvB;;;;;;EACF;;;;;;;;;;UClJ4B;AACI,4BAAkB;AAClB,+BAAqB;AAE3C,wBAAuB,uCAAgB,OAAO;AAEpD,YAAO,sDACqB,wBACF,6BAChB,mCACK,iBACY,sCACC,8BACf,2CACI;AACa,cAAZ,qCAAI,OAAO;sCAEjB,kBACE,mCACA,aACQ,kNAId,qCACe,AAAY,AAAK,0BAAd,OAAO,oCAEtB,yCACgC,+CACnB,yBAChB,+BACS,yCACgC,8CACnB,yBAChB,gCACoB,yBAChB,oCACI,KACA,kBACE,iBACO,wCACO,kBAA2B,iJAE/C,gCACU,mEAEV,oCACI,KACA,kBACE,iCACO,wCACO,aAAkB,AAAI,wBAAC,kMAI/C,gCACsB,kDAAsB,eACnC,gCACa,yBAChB,oCACI,KACA,uBACW,kBAAkB,eAAe,kEAChD,oCACI,KACA,uBACW,yBACM,eACJ,kBAAkB,8LAIzC,oCACI,KACA,gCACsB,kDAAsB,eACnC,sCACe,sCAAU,WAAS,mBAC3B,oDACmB,wCAAS,eAC5B,mCACE,mCAAyB,4BAC5B,mCAAyB,6BACxB,mCAAyB,8BACxB,mCAAyB,kCAE/B,iEAEG,iBACG;AAIR,4BAHD,AAAY,WAAD,4BACT,AAAgB,eAAD,OACf,AAAmB,kBAAD;AAEiB,4BAA3B,2CAAU,OAAO,EAAE;qDAEjB,sCACH,YACJ,uEACwB,wCAAS,gBACjC,kBACL,iBACO,0CACoB,8BAAgB,0TAKvD,oCACI,KACA,sCACuC,yCACnB,yBAChB,kBAAK,sGACL,gCAA4B,+BAAI,oEAChC,iDACS,kBACP,mBACO,0CACoB,8BAAgB,4EAEpC;AAGJ,4BAFS,uCAAK,OAAO,EAAE,yCACX,QAAC,WAAY;oWAU5C,oCACI,KACA,qCAC6C,aAAxB,AAAY,AAAK,0BAAd,OAAO,iBAAgB,eACjC,6CACD,iDACI,oCAAW,wCACN;IAMpC;;UAEkB;UAAO;UAAqB;AAC5C,YAAO,2CACkC,yCACrB,yBAChB,iCACE,KAAK,WACE,wCACO,kBAA2B,2BAAoB,sFAE/D,gCACU,kEAEV,wEACc,OAAO,6BACN,WAAW,eACZ,yDACiB,gDAAoB,iBAAe,uBAC/C,qDACC,mCAAyB,AAAI,wBAAC,kBACtC,qDACQ,mCAAyB,AAAI,wBAAC,yEAGlD,gCACU;IAIhB;;;;;;EACF","file":"../../../../../../../../packages/book_geeks/pages/Welcome/signup.dart.lib.js"}');
+  // Exports:
+  return {
+    pages__Welcome__signup: signup,
+    pages__Welcome__login: login
+  };
+}));
+
+//# sourceMappingURL=signup.dart.lib.js.map

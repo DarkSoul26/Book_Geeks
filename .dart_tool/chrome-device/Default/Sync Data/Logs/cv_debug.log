@@ -1,0 +1,25 @@
+{"logTime":"0903/091146", "correlationVector":"qhhQDlbOH9y6QGU2VAk+pX.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"48F630A6-CB1B-4CC7-86AF-0F6627234B58", "server":"SG2PEPF00000C94"}}
+{"logTime":"0903/091147", "correlationVector":"SZ5TmcJRy4J8jVm8sff/+S.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"48F630A6-CB1B-4CC7-86AF-0F6627234B58", "server":"SG2PEPF00000C94"}}
+{"logTime":"0903/091147", "correlationVector":"qhhQDlbOH9y6QGU2VAk+pX","action":"Initial GetUpdates", "result":""}
+{"logTime":"0903/091147", "correlationVector":"qhhQDlbOH9y6QGU2VAk+pX.2","action":"GetUpdates Response", "result":"SERVER_MORE_TO_DOWNLOAD"}
+{"logTime":"0903/091147", "correlationVector":"SZ5TmcJRy4J8jVm8sff/+S","action":"Initial GetUpdates", "result":""}
+{"logTime":"0903/091147", "correlationVector":"SZ5TmcJRy4J8jVm8sff/+S.2","action":"GetUpdates Response", "result":"SYNCER_OK"}
+{"logTime":"0903/091159", "correlationVector":"Qx3iuBOCEghTfs2bcbKISM","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"", "server":""}}
+{"logTime":"0903/091159", "correlationVector":"q6qhpD1oV1Jt1yqU+Tl5yA","action":"Initial GetUpdates", "result":""}
+{"logTime":"0903/091201", "correlationVector":"q6qhpD1oV1Jt1yqU+Tl5yA.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"48F630A6-CB1B-4CC7-86AF-0F6627234B58", "server":"SG2PEPF00000C8E"}}
+{"logTime":"0903/091201", "correlationVector":"q6qhpD1oV1Jt1yqU+Tl5yA.2","action":"GetUpdates Response", "result":"SERVER_MORE_TO_DOWNLOAD"}
+{"logTime":"0903/091201", "correlationVector":"QzvKlL8smvzKJrlrjY2u2J","action":"Initial GetUpdates", "result":""}
+{"logTime":"0903/091205", "correlationVector":"QzvKlL8smvzKJrlrjY2u2J.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"48F630A6-CB1B-4CC7-86AF-0F6627234B58", "server":"SG2PEPF00000C8E"}}
+{"logTime":"0903/091205", "correlationVector":"QzvKlL8smvzKJrlrjY2u2J.2","action":"GetUpdates Response", "result":"SERVER_MORE_TO_DOWNLOAD"}
+{"logTime":"0903/091205", "correlationVector":"7wNzMSh7pfLCmrP4/ExIOQ","action":"Initial GetUpdates", "result":""}
+{"logTime":"0903/091206", "correlationVector":"7wNzMSh7pfLCmrP4/ExIOQ.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"48F630A6-CB1B-4CC7-86AF-0F6627234B58", "server":"SG2PEPF00000C8E"}}
+{"logTime":"0903/091206", "correlationVector":"7wNzMSh7pfLCmrP4/ExIOQ.2","action":"GetUpdates Response", "result":"SERVER_MORE_TO_DOWNLOAD"}
+{"logTime":"0903/091206", "correlationVector":"7qiLwSjuFlGAwNFYfVq+KW","action":"Initial GetUpdates", "result":""}
+{"logTime":"0903/091207", "correlationVector":"7qiLwSjuFlGAwNFYfVq+KW.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"48F630A6-CB1B-4CC7-86AF-0F6627234B58", "server":"SG2PEPF00000C8E"}}
+{"logTime":"0903/091207", "correlationVector":"7qiLwSjuFlGAwNFYfVq+KW.2","action":"GetUpdates Response", "result":"SYNCER_OK"}
+{"logTime":"0903/091207", "correlationVector":"7o5ZjDypatVsdOR8l8nYv+","action":"Normal GetUpdate request", "result":""}
+{"logTime":"0903/091207", "correlationVector":"7o5ZjDypatVsdOR8l8nYv+.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"48F630A6-CB1B-4CC7-86AF-0F6627234B58", "server":"SG2PEPF00000C8E"}}
+{"logTime":"0903/091207", "correlationVector":"7o5ZjDypatVsdOR8l8nYv+.2","action":"GetUpdates Response", "result":"SYNCER_OK"}
+{"logTime":"0903/091207", "correlationVector":"vfe4I6JPLCqeh/p12n74Sk","action":"Commit Request", "result":""}
+{"logTime":"0903/091207", "correlationVector":"vfe4I6JPLCqeh/p12n74Sk.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"48F630A6-CB1B-4CC7-86AF-0F6627234B58", "server":"SG2PEPF00000C8E"}}
+{"logTime":"0903/091207", "correlationVector":"vfe4I6JPLCqeh/p12n74Sk.2","action":"Commit Response", "result":"SYNCER_OK"}
