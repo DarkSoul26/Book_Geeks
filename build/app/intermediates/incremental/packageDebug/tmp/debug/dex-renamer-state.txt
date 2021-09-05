@@ -1,4 +1,4 @@
-#Sun Sep 05 02:38:30 IST 2021
+#Sun Sep 05 10:01:07 IST 2021
 path.4=classes_1.dex
 path.3=classes_0.dex
 path.2=classes2.dex
@@ -9,6 +9,7 @@ path.8=classes_5.dex
 path.7=classes_4.dex
 path.6=classes_3.dex
 path.5=classes_2.dex
+renamed.10=classes11.dex
 path.0=classes.dex
 base.4=C\:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_1.dex
 base.3=C\:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_0.dex
@@ -18,6 +19,7 @@ base.0=C\:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\build\\app\\in
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
+path.10=classes_7.dex
 renamed.0=classes.dex
 base.9=C\:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_6.dex
 path.9=classes_6.dex
@@ -29,3 +31,4 @@ renamed.5=classes6.dex
 base.6=C\:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_3.dex
 renamed.4=classes5.dex
 base.5=C\:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_2.dex
+base.10=C\:\\Users\\DELL\\Desktop\\PICT\\radiance' 21\\Book_Geeks\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_7.dex

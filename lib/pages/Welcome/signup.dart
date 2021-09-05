@@ -188,12 +188,14 @@ class SignupPage extends StatelessWidget {
                                                     .createUserWithEmailAndPassword(
                                                   emailController.text,
                                                   passwordController.text,
-                                                );
-                                                Navigator.push(
+                                                ).then((_){
+                                                    
+                                                    Navigator.push(
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
                                                             Home()));
+                                                });
                                               } else {
                                                 showDialog<String>(
                                                   context: context,

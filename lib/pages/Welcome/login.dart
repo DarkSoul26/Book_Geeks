@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
-
+    bool flag = false;
     final authService = Provider.of<AuthService>(context);
 
     return Scaffold(
@@ -94,8 +94,11 @@ class LoginPage extends StatelessWidget {
                                           if (value == null || value.isEmpty) {
                                             return 'Please enter some text';
                                           }
+                                          print(value);
                                           return null;
                                         },
+                                        keyboardType: TextInputType.emailAddress,
+                                        autofillHints: [AutofillHints.email],
                                         controller: emailController,
                                         decoration: InputDecoration(
                                           contentPadding: EdgeInsets.symmetric(
@@ -106,6 +109,12 @@ class LoginPage extends StatelessWidget {
                                           border: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                   color: Colors.grey[400])),
+                                          suffixIcon: emailController.text.isEmpty ?
+                                            Container(width: 0) :
+                                              IconButton(
+                                                icon: Icon(Icons.close),
+                                                onPressed: () => emailController.clear(),
+                                              )
                                         ),
                                       ),
                                       SizedBox(
@@ -135,6 +144,7 @@ class LoginPage extends StatelessWidget {
                                           }
                                           if (value.length < 6)
                                             return 'Enter password greater than 5';
+                                          print(value);
                                           return null;
                                         },
                                         controller: passwordController,
@@ -188,12 +198,31 @@ class LoginPage extends StatelessWidget {
                                                     .signInWithEmailAndPassword(
                                                   emailController.text,
                                                   passwordController.text,
-                                                );
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            Home()));
+                                                )
+                                                    .then((_) {
+                                                  flag = true;
+                                                  Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              Home()));
+                                                });
+                                                if (flag) {
+                                                  AlertDialog(
+                                                    title: const Text(
+                                                        'Wrong Entry for Login'),
+                                                    content: const Text(
+                                                        'Enter valid email and password'),
+                                                    actions: <Widget>[
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                context, 'OK'),
+                                                        child: const Text('OK'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                }
                                               } else {
                                                 showDialog<String>(
                                                   context: context,
