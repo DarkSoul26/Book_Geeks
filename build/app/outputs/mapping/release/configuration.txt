@@ -211,6 +211,57 @@
 -dontwarn com.google.auto.value.AutoValue$Builder
 
 # End of content from C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\d743e2f135b4b07104c7861c96109c08\jetified-firebase-common-20.0.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9002695a03a0abeb3c802e179344979b\rules-1.2.0\proguard.txt
+# for 'can't find referenced method 'android.app.Instrumentation$ActivityResult execStartActivity' etc
+-dontwarn androidx.test.runner.MonitoringInstrumentation
+
+# for 'library class android.test.* extends or implements program class'
+-dontwarn android.test.**
+
+# End of content from C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\9002695a03a0abeb3c802e179344979b\rules-1.2.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\3345d6a855469ac51971b9a39a7310cd\espresso-core-3.2.0\proguard.txt
+# Common proguard flags for all the espresso libraries.
+
+# ignore 'cannot find java.beans and mockito integration' warnings
+-dontwarn org.hamcrest.**
+
+# ignore 'can't find referenced class sun.misc.Unsafe' from guava
+-dontwarn androidx.test.espresso.core.deps.guava.**
+
+# ignore 'can't find referenced class javax.lang.model.element.Modifier'
+-dontwarn com.squareup.javawriter.JavaWriter
+
+# ignore 'can't find referenced class sun.misc.Unsafe, libcore.io.Memory' from protobuf
+-dontwarn androidx.test.espresso.core.deps.protobuf.**
+
+# ignore 'can't find referenced method android.app.Instrumentation' from android.jar
+-dontwarn androidx.test.runner.MonitoringInstrumentation
+
+# End of content from C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\3345d6a855469ac51971b9a39a7310cd\espresso-core-3.2.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\6bdd3f19d66a12bdb67bb0e88f521843\runner-1.2.0\proguard.txt
+# Proguard flags for the AndroidJUnitRunner library.
+
+# avoid obfuscation of the instrumentation runners and orchestrator
+-keepnames class androidx.test.**
+
+# Annotation classes accessed via reflection
+-keep class androidx.test.annotation.** { *; }
+
+# for 'can't find referenced method 'android.app.Instrumentation$ActivityResult execStartActivity' etc
+-dontwarn androidx.test.runner.MonitoringInstrumentation
+
+# for 'library class android.test.* extends or implements program class'
+-dontwarn android.test.**
+
+# for 'can't find referenced class java.lang.management.RuntimeMXBean'
+-dontwarn org.junit.rules.DisableOnDebug
+
+# for 'can't find referenced class java.lang.management.ThreadMXBean'
+-dontwarn org.junit.internal.runners.statements.FailOnTimeout
+
+# for 'can't find referenced class java.beans.**, easymock, etc
+-dontwarn org.hamcrest.**
+# End of content from C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\6bdd3f19d66a12bdb67bb0e88f521843\runner-1.2.0\proguard.txt
 # The proguard configuration file for the following section is C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\0cd0c95cf645f00d921c59b7970ea12e\jetified-play-services-base-17.1.0\proguard.txt
 # b/35135904 Ensure that proguard will not strip the mResultGuardian.
 -keepclassmembers class com.google.android.gms.common.api.internal.BasePendingResult {
@@ -411,6 +462,19 @@
 -keep class * implements com.google.firebase.components.ComponentRegistrar
 
 # End of content from C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\780632dbc91973523d66f656ac8a55dd\jetified-firebase-components-17.0.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\3d77ca697b495091b7103cb05064f552\monitor-1.2.0\proguard.txt
+# Proguard flags for the AndroidJUnitRunner library.
+
+# avoid obfuscation of the instrumentation runners and orchestrator
+-keepnames class androidx.test.**
+
+# Annotation classes accessed via reflection
+-keep class androidx.test.annotation.** { *; }
+
+# for 'can't find referenced method 'android.app.Instrumentation$ActivityResult execStartActivity' etc
+-dontwarn androidx.test.runner.MonitoringInstrumentation
+
+# End of content from C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\3d77ca697b495091b7103cb05064f552\monitor-1.2.0\proguard.txt
 # The proguard configuration file for the following section is C:\Users\DELL\.gradle\caches\transforms-2\files-2.1\07e6106e1ef627f1e92e21d8bb5629a1\versionedparcelable-1.1.0\proguard.txt
 -keep public class * implements androidx.versionedparcelable.VersionedParcelable
 -keep public class android.support.**Parcelizer { *; }

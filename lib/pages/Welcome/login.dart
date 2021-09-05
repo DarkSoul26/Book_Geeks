@@ -94,7 +94,7 @@ class LoginPage extends StatelessWidget {
                                           if (value == null || value.isEmpty) {
                                             return 'Please enter some text';
                                           }
-                                          print(value);
+                                          //print(value);
                                           return null;
                                         },
                                         keyboardType: TextInputType.emailAddress,
@@ -144,7 +144,7 @@ class LoginPage extends StatelessWidget {
                                           }
                                           if (value.length < 6)
                                             return 'Enter password greater than 5';
-                                          print(value);
+                                          //print(value);
                                           return null;
                                         },
                                         controller: passwordController,

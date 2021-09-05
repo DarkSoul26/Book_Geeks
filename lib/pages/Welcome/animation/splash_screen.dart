@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:book_geeks/pages/Welcome/welcome.dart';
 import 'package:book_geeks/pages/home/home.dart';
 import 'package:book_geeks/pages/welcome/login.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
       String token = pref.getString('token');
       if (token == null) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
+            context, MaterialPageRoute(builder: (context) => Welcome()));
       } else {
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => Home()));

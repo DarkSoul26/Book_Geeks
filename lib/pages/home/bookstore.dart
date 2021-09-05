@@ -23,8 +23,10 @@ class _BookstoreState extends State<Bookstore> {
 
   List<Book> books = getBookList();
   List<Author> authors = getAuthorList();
+
   CollectionReference bookss =
       FirebaseFirestore.instance.collection("bookstore");
+  
   @override
   void initState() {
     super.initState();

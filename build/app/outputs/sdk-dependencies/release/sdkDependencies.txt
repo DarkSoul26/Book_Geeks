@@ -790,6 +790,126 @@ library {
 }
 library {
   maven_library {
+    groupId: "junit"
+    artifactId: "junit"
+    version: "4.12"
+  }
+  digests {
+    sha256: "Yr\037\b\005\342#\330K\220gx\207\331\377V}\3054\327\305\002\312\220<\f+\027\360\\\021j"
+  }
+}
+library {
+  maven_library {
+    groupId: "org.hamcrest"
+    artifactId: "hamcrest-core"
+    version: "1.3"
+  }
+  digests {
+    sha256: "f\375\357\221\351s\223H\337z\tj\243\204\245h_N\207U\204\314\350\223\206\247\244rQ\304\330\351"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.test"
+    artifactId: "runner"
+    version: "1.2.0"
+  }
+  digests {
+    sha256: "S\207\340\021\026z<\215\240\215\231\265\325\222H\300\342\332\203\223\027\264\216\277 .1\334\037y\036\301"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.test"
+    artifactId: "monitor"
+    version: "1.2.0"
+  }
+  digests {
+    sha256: "\374\227\312?\000\370\3120\267\325\026\177\275\2076u`H\342\314O\216\222\334\211\021\006u\032[\256\357"
+  }
+}
+library {
+  maven_library {
+    groupId: "net.sf.kxml"
+    artifactId: "kxml2"
+    version: "2.3.0"
+  }
+  digests {
+    sha256: "\362d\335\237y\241\375\341\f\345\354\3052!\357\362K\344\3113\034\203\v}R\362\360\212{c=\342"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.test"
+    artifactId: "rules"
+    version: "1.2.0"
+  }
+  digests {
+    sha256: "$\275q\021\340\333\221\264\245\366\325\303\343\350\226\230X\r\311\r)\'=\004\247u\273\177\347\302\247a"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.test.espresso"
+    artifactId: "espresso-core"
+    version: "3.2.0"
+  }
+  digests {
+    sha256: "\276\264q,% \301\3320\254\037%Phq\361n\245\270>\346\206\354\345\242Xv\235\361\240\036\025"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.test.espresso"
+    artifactId: "espresso-idling-resource"
+    version: "3.2.0"
+  }
+  digests {
+    sha256: "\301\240EO\351W\210\022+\246R\303\354\377~\3058\307\342}\342\006\256\331p\362\200\237\270\t\r\t"
+  }
+}
+library {
+  maven_library {
+    groupId: "com.squareup"
+    artifactId: "javawriter"
+    version: "2.1.1"
+  }
+  digests {
+    sha256: "\366\231\202=\000\201\366\234\273gl\030E\352\".\n\332y\274\210\245>]\"\330\275\002\323(\365~"
+  }
+}
+library {
+  maven_library {
+    groupId: "javax.inject"
+    artifactId: "javax.inject"
+    version: "1"
+  }
+  digests {
+    sha256: "\221\307pD\245\fH\0266\303-\221o\330\234\221\030\247!\2259\004R\310\020e\b\017\225}\347\377"
+  }
+}
+library {
+  maven_library {
+    groupId: "org.hamcrest"
+    artifactId: "hamcrest-library"
+    version: "1.3"
+  }
+  digests {
+    sha256: "q\035dR/\236\304\020\230;\323\020\223B\226\332\023K\344%J\022P\200\240An\301x\337\255\034"
+  }
+}
+library {
+  maven_library {
+    groupId: "org.hamcrest"
+    artifactId: "hamcrest-integration"
+    version: "1.3"
+  }
+  digests {
+    sha256: "p\364\030\357\273PlQU\332_\232Z3&.\240\212\236M\177\352\030j\251\001\\A\247\"J\302"
+  }
+}
+library {
+  maven_library {
     groupId: "org.jetbrains.kotlin"
     artifactId: "kotlin-stdlib-jdk7"
     version: "1.4.32"
@@ -860,7 +980,7 @@ library {
 }
 library {
   digests {
-    sha256: "\"\362f@\337-\363\362n\302\020\301\031\037\306\356*\306\260r\231V5O\370g\235\331.r\205\200"
+    sha256: "x\030\275:\203*\337\341E\256\177c\264;\311\224\025f3c\333\357\330M6]\016\2150\023\370\367"
   }
 }
 library_dependencies {
@@ -1284,20 +1404,57 @@ library_dependencies {
   library_dep_index: 80
 }
 library_dependencies {
-  library_index: 80
-  library_dep_index: 81
+  library_index: 81
+  library_dep_index: 16
   library_dep_index: 82
+  library_dep_index: 79
+  library_dep_index: 83
 }
 library_dependencies {
-  library_index: 86
+  library_index: 82
+  library_dep_index: 16
+}
+library_dependencies {
+  library_index: 84
+  library_dep_index: 81
+}
+library_dependencies {
+  library_index: 85
+  library_dep_index: 81
+  library_dep_index: 86
+  library_dep_index: 87
+  library_dep_index: 88
+  library_dep_index: 89
+  library_dep_index: 90
+  library_dep_index: 70
+}
+library_dependencies {
+  library_index: 89
+  library_dep_index: 80
+}
+library_dependencies {
+  library_index: 90
+  library_dep_index: 89
+}
+library_dependencies {
+  library_index: 91
+  library_dep_index: 92
+}
+library_dependencies {
+  library_index: 92
+  library_dep_index: 93
+  library_dep_index: 94
+}
+library_dependencies {
+  library_index: 98
 }
 module_dependencies {
   module_name: "base"
   dependency_index: 0
+  dependency_index: 96
   dependency_index: 1
-  dependency_index: 83
-  dependency_index: 84
-  dependency_index: 85
-  dependency_index: 86
-  dependency_index: 79
+  dependency_index: 97
+  dependency_index: 98
+  dependency_index: 91
+  dependency_index: 95
 }
