@@ -334,11 +334,11 @@ com.google.firebase.firestore.proto.WriteBatch$Builder:
     public com.google.firebase.firestore.proto.WriteBatch$Builder removeBaseWrites(int)
 com.google.common.collect.MapMakerInternalMap$WeakValueReferenceImpl
 androidx.test.espresso.base.UiControllerModule$EspressoUiControllerAdapter
-com.google.firestore.bundle.BundleElement
 com.google.firebase.firestore.util.AsyncQueue$DelayedTask:
     static synthetic com.google.firebase.firestore.util.AsyncQueue$TimerId access$900(com.google.firebase.firestore.util.AsyncQueue$DelayedTask)
     static synthetic long access$1300(com.google.firebase.firestore.util.AsyncQueue$DelayedTask)
     void skipDelay()
+com.google.firestore.bundle.BundleElement
 com.google.firebase.firestore.core.IndexRange$1
 com.google.rpc.DebugInfo
 androidx.lifecycle.R
@@ -14462,8 +14462,8 @@ com.google.protobuf.ExtensionLite:
     public abstract com.google.protobuf.MessageLite getMessageDefaultInstance()
     boolean isLite()
 com.google.type.Date
-io.grpc.inprocess.InProcessTransport$InProcessStream
 io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed
+io.grpc.inprocess.InProcessTransport$InProcessStream
 com.google.api.QuotaLimit$Builder
 androidx.loader.R$color
 androidx.test.espresso.core.internal.deps.guava.util.concurrent.ImmediateFuture$ImmediateFailedFuture
@@ -14796,7 +14796,6 @@ com.google.common.primitives.Primitives
 androidx.test.internal.runner.filters.TestsRegExFilter
 androidx.test.espresso.action.MotionEvents$DownResultHolder
 com.google.cloud.audit.AuditLog
-com.google.firebase.firestore.util.package-info
 com.google.firestore.v1.StructuredQuery$Order$Builder:
     public boolean hasField()
     public com.google.firestore.v1.StructuredQuery$FieldReference getField()
@@ -14807,6 +14806,7 @@ com.google.firestore.v1.StructuredQuery$Order$Builder:
     public com.google.firestore.v1.StructuredQuery$Order$Builder setDirectionValue(int)
     public com.google.firestore.v1.StructuredQuery$Direction getDirection()
     public com.google.firestore.v1.StructuredQuery$Order$Builder clearDirection()
+com.google.firebase.firestore.util.package-info
 com.google.common.collect.TreeMultiset
 com.google.common.collect.StandardRowSortedTable
 com.google.android.gms.common.api.OptionalPendingResult
