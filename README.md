@@ -8,6 +8,7 @@ A Project using Flutter and Firebase.
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
+- [Link to the project .apk file](https://drive.google.com/file/d/1Ks_5bWrUYjtzUiYYQMBkpnN8C8R1zeI3/view?usp=sharing)
 - [My Presentation on this Project](https://docs.google.com/presentation/d/1fE3zxiR_6T3fjKQjOKkKPB7vpvx8sYBuBM-1KIeenf4/edit?usp=sharing)
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
